@@ -1,0 +1,87 @@
+
+body {
+  /* Copy variations */
+  &.layout-1,
+  &.layout-4,
+  &.layout-7,
+  &.layout-10 {
+    // Incentivize
+    .headline.headline-1,
+    .cta.cta-1 {
+      display: block;
+    }
+    .button .button-text.button-text-1 {
+      display: inline;
+    }
+  }
+  &.layout-2,
+  &.layout-5,
+  &.layout-8,
+  &.layout-11 {
+    // Mystery
+    .headline.headline-2,
+    .cta.cta-2 {
+      display: block;
+    }
+    .button .button-text.button-text-2 {
+      display: inline;
+    }
+  }
+  &.layout-3,
+  &.layout-6,
+  &.layout-9,
+  &.layout-12 {
+    // Value prop
+    .headline.headline-3,
+    .cta.cta-3 {
+      display: block;
+    }
+    .button .button-text.button-text-3 {
+      display: inline;
+    }
+  }
+  
+  /* Background and layout variations */
+  &.layout-1,
+  &.layout-2,
+  &.layout-3,
+  &.layout-7,
+  &.layout-8,
+  &.layout-9 {
+    background-image: url('../images/user-acquisition-bg-football.jpg');
+    .headline,
+    .cta {
+      margin-right: 100px;
+    }
+  }
+  &.layout-4,
+  &.layout-5,
+  &.layout-6,
+  &.layout-10,
+  &.layout-11,
+  &.layout-12 {
+    background-image: url('../images/user-acquisition-bg-swimmer.jpg');
+    .headline,
+    .cta {
+      margin-left: 70px;
+    }
+    #content-wrapper,
+    #field-button-wrapper {
+      float: right;
+      text-align: right;
+    }
+  }
+  
+  /* Button variations */
+  &.layout-1,
+  &.layout-2,
+  &.layout-3,
+  &.layout-4,
+  &.layout-5,
+  &.layout-6 {
+    .button {
+      @include border-bottom-right-radius(50px);
+      padding-right: 1.5em !important;
+    }
+  }
+}

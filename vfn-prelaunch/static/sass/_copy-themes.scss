@@ -1,0 +1,38 @@
+/* Copy themes */
+
+body {
+  &.layout-1,
+  &.layout-4 {
+    // Incentivize
+    .headline.headline-1,
+    .cta.cta-1 {
+      display: block;
+    }
+    .button .button-text.button-text-1 {
+      display: inline;
+    }
+  }
+  &.layout-2,
+  &.layout-5 {
+    // Mystery
+    .headline.headline-2,
+    .cta.cta-2 {
+      display: block;
+    }
+    .button .button-text.button-text-2 {
+      display: inline;
+    }
+  }
+  &.layout-3,
+  &.layout-6 {
+    // Value prop
+    .headline.headline-3,
+    .cta.cta-3 {
+      display: block;
+    }
+    .button .button-text.button-text-3 {
+      display: inline;
+    }
+  }
+
+}

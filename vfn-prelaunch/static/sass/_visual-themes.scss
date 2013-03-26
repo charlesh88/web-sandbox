@@ -1,0 +1,26 @@
+/* Visual themes */
+
+body {
+  &.layout-1,
+  &.layout-2,
+  &.layout-3 {
+    background-image: url('../images/user-acquisition-bg-football.jpg');
+    #content-wrapper {
+      text-align: left;
+    }
+  }
+  &.layout-4,
+  &.layout-5,
+  &.layout-6 {
+    background-image: url('../images/user-acquisition-bg-swimmer.jpg');
+    #content-wrapper,
+    #field-button-wrapper {
+      float: right;
+      text-align: right;
+    }
+    #logo-sqor {
+      //left: auto;
+      //right: $sideMargin;
+    }
+  }
+}
