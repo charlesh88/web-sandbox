@@ -1,0 +1,185 @@
+/* line 8, ../sass/styles.scss */
+body {
+  background: #363636 url("../assets/bg-dimensions-1024.gif") no-repeat 0 0;
+  color: white;
+  font-family: sans-serif;
+  font-size: .8em;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 17, ../sass/styles.scss */
+h1 {
+  font-size: 1.3em;
+  white-space: normal !important;
+}
+
+/* line 22, ../sass/styles.scss */
+h2 {
+  font-size: 1.1em;
+}
+
+/* line 26, ../sass/styles.scss */
+#report {
+  top: 20px;
+  right: 20px;
+  bottom: 20px;
+  left: 20px;
+  position: absolute;
+  z-index: 2;
+}
+
+/* line 35, ../sass/styles.scss */
+#vfc {
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
+  z-index: 1;
+}
+
+/* line 48, ../sass/styles.scss */
+#report span {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  display: none;
+  margin: 2px 0;
+  padding: 3px 5px;
+}
+/* line 56, ../sass/styles.scss */
+#report span#no-match {
+  display: inline-block;
+}
+
+/* line 61, ../sass/styles.scss */
+span.no-hide {
+  display: inline-block !important;
+}
+
+/*-------------------------------- MEDIA QUERIES -------------------------*/
+/* line 111, ../sass/styles.scss */
+#report-device span#s0 {
+  display: inline-block !important;
+}
+
+/* line 117, ../sass/styles.scss */
+#display-strategy span#s1 {
+  display: inline-block !important;
+}
+
+/* line 124, ../sass/styles.scss */
+#display-strategy span#s2 {
+  display: inline-block !important;
+}
+/* line 126, ../sass/styles.scss */
+#display-strategy span#s2:before {
+  content: "Portrait Nav";
+}
+
+@media screen and (orientation: landscape) and (max-width: 400px), screen and (orientation: landscape) and (max-height: 400px) {
+  /* line 157, ../sass/styles.scss */
+  #display-strategy span#s1 {
+    display: inline-block !important;
+  }
+  /* line 159, ../sass/styles.scss */
+  #display-strategy span#s1:before {
+    content: "Card Fullscreen";
+  }
+
+  /* line 163, ../sass/styles.scss */
+  #display-strategy span#s2 {
+    display: inline-block !important;
+  }
+  /* line 165, ../sass/styles.scss */
+  #display-strategy span#s2:before {
+    content: "Landscape Nav";
+  }
+}
+@media screen and (min-device-width: 768px) and (min-device-height: 768px) and (min-width: 400px) and (min-height: 400px) {
+  /* line 177, ../sass/styles.scss */
+  #vfc {
+    border: solid black 2px;
+    top: 50%;
+    right: auto;
+    bottom: auto;
+    left: 50%;
+    height: 550px;
+    width: 300px;
+    margin-left: -150px;
+    margin-top: -275px;
+  }
+
+  /* line 180, ../sass/styles.scss */
+  #report-device span#s0 {
+    display: inline-block !important;
+  }
+  /* line 182, ../sass/styles.scss */
+  #report-device span#s0:before {
+    content: "Over threshold";
+  }
+
+  /* line 186, ../sass/styles.scss */
+  #display-strategy span#s1 {
+    display: inline-block !important;
+  }
+  /* line 188, ../sass/styles.scss */
+  #display-strategy span#s1:before {
+    content: "Card fixed width and height on background";
+  }
+}
+@media only screen and (max-resolution: 96dpi), only screen and (-webkit-max-device-pixel-ratio: 1) {
+  /* line 263, ../sass/styles.scss */
+  #report-ppi span#ppiLo {
+    display: inline-block;
+  }
+  /* line 267, ../sass/styles.scss */
+  #report-ppi span#no-match {
+    display: none;
+  }
+}
+@media only screen and (min-resolution: 97dpi) and (max-resolution: 191dpi), only screen and (-webkit-min-device-pixel-ratio: 1.1) and (-webkit-max-device-pixel-ratio: 1.9) {
+  /* line 278, ../sass/styles.scss */
+  #report-ppi span#ppiMd {
+    display: inline-block;
+  }
+  /* line 282, ../sass/styles.scss */
+  #report-ppi span#no-match {
+    display: none;
+  }
+}
+@media only screen and (min-resolution: 192dpi), only screen and (-webkit-min-device-pixel-ratio: 2) {
+  /* line 293, ../sass/styles.scss */
+  #report-ppi span#ppiHi {
+    display: inline-block;
+  }
+  /* line 297, ../sass/styles.scss */
+  #report-ppi span#no-match {
+    display: none;
+  }
+}
+@media (orientation: portrait) {
+  /* line 306, ../sass/styles.scss */
+  #report-orientation span#s1 {
+    display: inline;
+  }
+  /* line 309, ../sass/styles.scss */
+  #report-orientation span#s1:before {
+    content: "Portrait";
+  }
+}
+@media (orientation: landscape) {
+  /* line 320, ../sass/styles.scss */
+  #report-orientation span#s1 {
+    display: inline;
+  }
+  /* line 323, ../sass/styles.scss */
+  #report-orientation span#s1:before {
+    content: "Landscape";
+  }
+}

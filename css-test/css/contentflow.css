@@ -1,0 +1,199 @@
+.ContentFlow .flow .item canvas.content
+{
+	height:100%;
+	width:100%;
+}
+
+.ContentFlow .flow .item.active
+{
+	cursor:pointer;
+}
+
+.ContentFlow .flow .item .caption
+{
+	background:url(/app.collection.static/images/contentflow/1x1_0.5_black.png);
+	bottom:10%;
+	color:#FFF;
+	display:none;
+	font-size:100%;
+	font-weight:700;
+	max-height:30%;
+	position:absolute;
+	text-align:center;
+	width:100%;
+}
+
+* html .ContentFlow .flow .item .caption
+{
+	background-image:none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=scale,src='img/1x1_0.5_black.png');
+}
+
+.ContentFlow .scrollbar
+{
+	background:url(/app.collection.static/images/contentflow/scrollbar_white.png) left center repeat-x;
+	height:16px;
+	margin:10px auto 0;
+	overflow:visible;
+	position:relative;
+	visibility:hidden;
+	width:50%;
+	z-index:1;
+}
+
+.ContentFlow .scrollbar .slider
+{
+	background:url(/app.collection.static/images/contentflow/slider_white.png) center center no-repeat;
+	cursor:move;
+	height:16px;
+	position:absolute;
+	width:16px;
+}
+
+* html .ContentFlow .scrollbar .slider
+{
+	background-image:none;
+}
+
+* html .ContentFlow .scrollbar .slider .virtualSlider
+{
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src='img/slider_white.png');
+	height:100%;
+}
+
+.ContentFlow .scrollbar .slider .position
+{
+	color:silver;
+	font-size:16px;
+	font-weight:700;
+	position:absolute;
+	text-align:center;
+	top:120%;
+}
+
+.ContentFlow .globalCaption
+{
+	color:#FFF;
+	font-size:14px;
+	font-weight:700;
+	height:20px;
+	margin:2em auto;
+	position:relative;
+	text-align:center;
+	z-index:1;
+}
+
+.ContentFlow .loadIndicator
+{
+	background:#000;
+	height:100%;
+	left:0;
+	position:absolute;
+	top:0;
+	width:100%;
+	z-index:65000;
+}
+
+.ContentFlow .loadIndicator .indicator
+{
+	background:url(/app.collection.static/images/contentflow/loader.gif) center center no-repeat;
+	height:100%;
+	width:100%;
+}
+
+* html .ContentFlow .loadIndicator .indicator
+{
+	height:100px;
+}
+
+.ContentFlow
+{
+	overflow:hidden;
+	position:relative;
+}
+
+.ContentFlow *
+{
+	margin:0;
+	padding:0;
+}
+
+.ContentFlow img
+{
+	-ms-interpolation-mode:bicubic;
+}
+
+.ContentFlow .mouseoverCheckElement
+{
+	height:0;
+	left:0;
+	position:absolute;
+	visibility:hidden;
+	width:0;
+}
+
+.ContentFlow:hover .mouseoverCheckElement
+{
+	left:1px;
+}
+
+.ContentFlow .flow
+{
+	margin:0 auto;
+	position:relative;
+	visibility:hidden;
+	width:100%;
+	z-index:0;
+}
+
+.ContentFlow .flow.hidden
+{
+	visibility:hidden;
+}
+
+.ContentFlow .flow .item
+{
+	left:0;
+	position:absolute;
+	top:0;
+	visibility:hidden;
+}
+
+.ContentFlow .flow .item div.content
+{
+	height:100%;
+	width:100%;
+}
+
+.ContentFlow .flow .item .label
+{
+	display:none;
+}
+
+.ContentFlow .flow .item canvas.reflection
+{
+	margin-top:-1px;
+}
+
+.ContentFlow .flow .item img.content,.ContentFlow .flow .item img.reflection,.ContentFlow .flow .item canvas.reflection
+{
+	width:100%;
+}
+
+.ContentFlow .flow .item .caption a,.ContentFlow .flow .item .caption a:link,.ContentFlow .flow .item .caption a:visited,.ContentFlow .flow .item .caption a:active,.ContentFlow .flow .item .caption a:hover,.ContentFlow .globalCaption .caption a,.ContentFlow .globalCaption .caption a:link,.ContentFlow .globalCaption .caption a:visited,.ContentFlow .globalCaption .caption a:active,.ContentFlow .globalCaption .caption a:hover
+{
+	color:#FFF;
+	font-size:.8em;
+	font-style:italic;
+	text-decoration:none;
+}
+
+.ContentFlow .flow .item .caption a:hover,.ContentFlow .globalCaption .caption a:hover
+{
+	text-decoration:underline;
+}
+
+.ContentFlow .flow .item .content,.ContentFlow .flow .item .reflection
+{
+	display:block;
+}

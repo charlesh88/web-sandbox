@@ -1,0 +1,50 @@
+
+div.coverflow-container
+{
+    -webkit-touch-callout: none;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+/*
+    position: absolute;
+*/
+    -webkit-perspective: 600;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transform: translate3d(0, 0, 0);
+}
+
+div.coverflow-entities
+{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    -webkit-transform-style: preserve-3d;
+    -webkit-transform: translate3d(0, 0, 0);
+
+    -webkit-transition-property: -webkit-transform;
+    -webkit-transition-duration: 0.4s;
+    -webkit-transition-timing-function: ease-out;
+}
+
+div.coverflow-cell
+{
+    width: 150px;
+    height: 300px;
+    position: absolute;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transform: translate3d(0, 0, 0);
+
+    -webkit-transition-property: -webkit-transform opacity;
+    -webkit-transition-duration: 0.4s;
+    -webkit-transition-timing-function: ease-out;
+}
+
+div.coverflow-cell img
+{
+    position: absolute;
+}
+
+div.coverflow-cell canvas
+{
+    position: absolute;
+}

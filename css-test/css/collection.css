@@ -1,0 +1,1522 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
+/* line 17, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/*
+Site: VFN Platform
+Type: Base Styles, Variables and Reuseable mixins
+Author: Fernando Medina
+URL: 
+
+### TABLE OF CONTENTS ############################
+
+	HTML Tags
+	Compass Variables
+	Reusable Mix-Ins
+
+################################################*/
+/********************************* HTML TAGS */
+/* line 51, ../sass/_base.scss */
+html, body {
+  overflow: scroll;
+}
+
+/* line 54, ../sass/_base.scss */
+h1, h2 {
+  font-family: "Titillium Web", Helvetica, Arial, sans-serif;
+  font-style: "600italic";
+}
+
+/* line 59, ../sass/_base.scss */
+h1 {
+  text-shadow: rgba(0, 0, 0, 0.7) 0px 1px 5px;
+  color: #ffad31;
+  font-style: italic;
+  font-size: 1.3em;
+}
+
+/* line 65, ../sass/_base.scss */
+h2 {
+  font-size: 1.3em;
+  margin: 0 0 .25em 0;
+}
+
+/* line 69, ../sass/_base.scss */
+p {
+  margin: 5px 0;
+}
+
+/* line 74, ../sass/_base.scss */
+strong {
+  font-weight: bold;
+}
+
+/* line 77, ../sass/_base.scss */
+a, a:visited {
+  color: #ba3326;
+  text-decoration: none !important;
+}
+/* line 80, ../sass/_base.scss */
+a:hover, a:visited:hover {
+  color: red;
+}
+
+/* line 82, ../sass/_base.scss */
+iframe {
+  overflow: hidden;
+}
+
+/*
+Site: VFN Platform
+Type: Page Structure
+Author: Fernando Medina
+URL: 
+
+### TABLE OF CONTENTS ############################
+
+	body
+	Header
+	Container
+		NAV Main
+		Content
+	Footer
+
+################################################*/
+/* line 19, ../sass/_page.scss */
+body {
+  background: #49678a url("../images/bg-tim-blue-3.jpg") no-repeat center top;
+  background-attachment: fixed;
+  background-size: 100%;
+  color: #cccccc;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  line-height: 120%;
+}
+
+/* line 32, ../sass/_page.scss */
+#container {
+  height: 100%;
+  width: 97%;
+  margin: 0 auto;
+  position: relative;
+  max-width: 840px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  background: #000;
+  /* IE 6-9 */
+  background: rgba(0, 0, 0, 0.6) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  color: white;
+  margin-top: 65px;
+  overflow: hidden;
+  padding: 0 2%;
+}
+
+/* line 49, ../sass/_page.scss */
+#title {
+  clear: right;
+  padding-top: 4%;
+}
+
+/* line 55, ../sass/_page.scss */
+footer {
+  clear: left;
+}
+
+/* dummy content */
+/* line 61, ../sass/_page.scss */
+#content, #nav-site {
+  -webkit-transition: .2s all ease;
+  -moz-transition: .2s all ease;
+  transition: .2s all ease;
+  position: absolute;
+  bottom: 10px;
+  top: 45px;
+}
+
+/* line 70, ../sass/_page.scss */
+#content {
+  width: 96%;
+  	/* @include border-radius($crLg);
+  	border: 1px solid #333;
+  
+  	@include box-shadow($vfnShadow 0 0 10px); */
+  padding: 3%;
+  background: transparent!important;
+}
+
+/********************************* Header */
+/* line 84, ../sass/_page.scss */
+header {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIzMCUiIHN0b3AtY29sb3I9IiM0ZDRkNGQiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(30%, #4d4d4d), color-stop(100%, #000000));
+  background-image: -webkit-linear-gradient(#4d4d4d 30%, #000000);
+  background-image: -moz-linear-gradient(#4d4d4d 30%, #000000);
+  background-image: -o-linear-gradient(#4d4d4d 30%, #000000);
+  background-image: linear-gradient(#4d4d4d 30%, #000000);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 5px 10px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 5px 10px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 5px 10px;
+  color: white;
+  font-size: 0.85em;
+  height: 44px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+/* line 95, ../sass/_page.scss */
+header #logo-vfn {
+  background: transparent url("../images/vfn-main-logo.png") no-repeat center top;
+  height: 44px;
+  width: 175px;
+  position: inherit;
+  width: 100%;
+}
+/* line 102, ../sass/_page.scss */
+header #user {
+  display: none;
+  margin: 0 3%;
+}
+
+/********************************* Header */
+/********************************* Footer */
+/* line 115, ../sass/_page.scss */
+footer {
+  clear: both;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 0.75em;
+  height: 28px;
+}
+/* line 124, ../sass/_page.scss */
+footer #copyright {
+  text-align: right;
+}
+/* line 128, ../sass/_page.scss */
+footer #social {
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  border-radius: 7px;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  width: 75%;
+}
+/* line 135, ../sass/_page.scss */
+footer .elem {
+  background: rgba(0, 255, 0, 0.2) !important;
+  padding: 2px;
+}
+
+/*
+Site: VFN Platform
+Type: Sitewide Navigation
+Author: Fernando Medina
+URL: 
+
+### TABLE OF CONTENTS ############################
+
+	NAV Heder
+	NAV Main
+
+################################################*/
+/* line 322, navicon/*.png */
+.navicon-sprite, .navicon-baseball, .navicon-basketball, .navicon-bmx, .navicon-boxing, .navicon-football, .navicon-golf, .navicon-hockey, .navicon-mma, .navicon-motogp, .navicon-nascar, .navicon-pro-wrestling, .navicon-road-racing, .navicon-run, .navicon-skeleton, .navicon-ski, .navicon-soccer, .navicon-surf, .navicon-track-and-field {
+  background: url('/static/images/navicon-sd670a57079.png') no-repeat;
+}
+
+/* line 60, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.navicon-baseball {
+  background-position: 0 -434px;
+}
+
+/* line 60, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.navicon-basketball {
+  background-position: 0 -310px;
+}
+
+/* line 60, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.navicon-bmx {
+  background-position: 0 -558px;
+}
+
+/* line 60, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.navicon-boxing {
+  background-position: 0 -744px;
+}
+
+/* line 60, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.navicon-football {
+  background-position: 0 -1054px;
+}
+
+/* line 60, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.navicon-golf {
+  background-position: 0 -620px;
+}
+
+/* line 60, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.navicon-hockey {
+  background-position: 0 -1612px;
+}
+
+/* line 60, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.navicon-mma {
+  background-position: 0 -1550px;
+}
+
+/* line 60, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.navicon-motogp {
+  background-position: 0 -2046px;
+}
+
+/* line 60, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.navicon-nascar {
+  background-position: 0 -372px;
+}
+
+/* line 60, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.navicon-pro-wrestling {
+  background-position: 0 -186px;
+}
+
+/* line 60, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.navicon-road-racing {
+  background-position: 0 0;
+}
+
+/* line 60, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.navicon-run {
+  background-position: 0 -1116px;
+}
+
+/* line 60, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.navicon-skeleton {
+  background-position: 0 -992px;
+}
+
+/* line 60, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.navicon-ski {
+  background-position: 0 -682px;
+}
+
+/* line 60, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.navicon-soccer {
+  background-position: 0 -248px;
+}
+
+/* line 60, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.navicon-surf {
+  background-position: 0 -2108px;
+}
+
+/* line 60, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.navicon-track-and-field {
+  background-position: 0 -930px;
+}
+
+/* line 29, ../sass/_nav.scss */
+#nav-container {
+  font-size: .65em;
+}
+/* line 31, ../sass/_nav.scss */
+#nav-container ul {
+  list-style-type: none;
+  margin: 0 0 15px;
+  padding: 3px 0 0 0;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+/* line 38, ../sass/_nav.scss */
+#nav-container ul li {
+  display: inline-block;
+  padding: 35px 8px 5px 8px;
+  margin-right: 10px;
+  background-position-x: center;
+}
+/* line 46, ../sass/_nav.scss */
+#nav-container #nav-sub li {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFA14C4C', endColorstr='#FF8F1313');
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0icmdiYSg0NCwgNDQsIDMzLCAwLjQpIi8+PHN0b3Agb2Zmc2V0PSIxMiUiIHN0b3AtY29sb3I9InJnYmEoNTUsIDU1LCA1NSwgMC42MikiLz48c3RvcCBvZmZzZXQ9IjMwJSIgc3RvcC1jb2xvcj0icmdiYSg3MSwgNzEsIDcxLCAwLjYpIi8+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9InJnYmEoNDQsIDQ0LCA0NCwgMC40KSIvPjxzdG9wIG9mZnNldD0iNTElIiBzdG9wLWNvbG9yPSJyZ2JhKDAsIDAsIDAsIDAuNCkiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9InJnYmEoMTksIDE5LCAxOSwgMC41NikiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(44, 44, 33, 0.4)), color-stop(12%, rgba(55, 55, 55, 0.62)), color-stop(30%, rgba(71, 71, 71, 0.6)), color-stop(50%, rgba(44, 44, 44, 0.4)), color-stop(51%, rgba(0, 0, 0, 0.4)), color-stop(100%, rgba(19, 19, 19, 0.56)));
+  background-image: -webkit-linear-gradient(top, rgba(44, 44, 33, 0.4) 0%, rgba(55, 55, 55, 0.62) 12%, rgba(71, 71, 71, 0.6) 30%, rgba(44, 44, 44, 0.4) 50%, rgba(0, 0, 0, 0.4) 51%, rgba(19, 19, 19, 0.56) 100%);
+  background-image: -moz-linear-gradient(top, rgba(44, 44, 33, 0.4) 0%, rgba(55, 55, 55, 0.62) 12%, rgba(71, 71, 71, 0.6) 30%, rgba(44, 44, 44, 0.4) 50%, rgba(0, 0, 0, 0.4) 51%, rgba(19, 19, 19, 0.56) 100%);
+  background-image: -o-linear-gradient(top, rgba(44, 44, 33, 0.4) 0%, rgba(55, 55, 55, 0.62) 12%, rgba(71, 71, 71, 0.6) 30%, rgba(44, 44, 44, 0.4) 50%, rgba(0, 0, 0, 0.4) 51%, rgba(19, 19, 19, 0.56) 100%);
+  background-image: linear-gradient(top, rgba(44, 44, 33, 0.4) 0%, rgba(55, 55, 55, 0.62) 12%, rgba(71, 71, 71, 0.6) 30%, rgba(44, 44, 44, 0.4) 50%, rgba(0, 0, 0, 0.4) 51%, rgba(19, 19, 19, 0.56) 100%);
+  -moz-box-shadow: inset 0px 1px 0px 0px #444;
+  -webkit-box-shadow: inset 0px 1px 0px 0px #444;
+  box-shadow: inset 0px 1px 0px 0px #444;
+  border: 1px solid #222;
+  border-color: #000 #222 #555 #222;
+  height: auto;
+  padding: 5px 8px!important;
+}
+
+/* line 60, ../sass/_nav.scss */
+#nav-root {
+  font-size: 1.3em;
+}
+
+/* line 63, ../sass/_nav.scss */
+#nav-sub .active {
+  color: yellow;
+}
+
+/* line 66, ../sass/_nav.scss */
+#matched-entities {
+  min-height: 100%;
+}
+
+/* line 69, ../sass/_nav.scss */
+div.entity-item {
+  padding: 10px;
+}
+
+/* line 72, ../sass/_nav.scss */
+.card {
+  display: inline-block;
+  scrolling: no;
+  seamless: true;
+  frameborder: 0;
+  width: 320px;
+  height: 620px;
+  border-collapse: collapse;
+}
+
+/* line 82, ../sass/_nav.scss */
+.navicon-sprite, .navicon-baseball, .navicon-basketball, .navicon-bmx, .navicon-boxing, .navicon-football, .navicon-golf, .navicon-hockey, .navicon-mma, .navicon-motogp, .navicon-nascar, .navicon-pro-wrestling, .navicon-road-racing, .navicon-run, .navicon-skeleton, .navicon-ski, .navicon-soccer, .navicon-surf, .navicon-track-and-field, .navicon-baseball, .navicon-bmx, .navicon-boxing, .navicon-football, .navicon-golf, .navicon-hockey, .navicon-mma, .navicon-motogp, .navicon-nascar, .navicon-pro-wrestling, .navicon-road-racing, .navicon-run, .navicon-skeleton, .navicon-ski, .navicon-soccer, .navicon-surf, .navicon-track-and-field {
+  background-image: url("../images/navicon-sd670a57079.png") !important;
+}
+
+/* line 86, ../sass/_nav.scss */
+nav li {
+  cursor: pointer;
+}
+
+/* line 91, ../sass/_nav.scss */
+nav li:hover {
+  color: #ffaa00;
+}
+
+/* line 95, ../sass/_nav.scss */
+.coverflow-container {
+  clear: both;
+  padding-top: 20px;
+}
+
+/* line 100, ../sass/_nav.scss */
+a.nav-menu-button {
+  padding: 0 5px;
+  width: 44px;
+  display: block;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  width: 60px;
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 5px;
+  z-index: 300000;
+  border: 1px solid #555;
+  -moz-box-shadow: inset 0px 1px 0px 0px #999;
+  -webkit-box-shadow: inset 0px 1px 0px 0px #999;
+  box-shadow: inset 0px 1px 0px 0px #999;
+  background-color: transparent;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  border: 1px solid #000;
+  border-color: #000 #000 #555 #000;
+  display: inline-block;
+  color: #ddd!important;
+  text-decoration: none;
+  text-shadow: 1px 1px 0px #444;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* line 132, ../sass/_nav.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 137, ../sass/_nav.scss */
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* dummy content */
+/* line 144, ../sass/_nav.scss */
+#content, nav {
+  -webkit-transition: .2s all ease;
+  -moz-transition: .2s all ease;
+  transition: .2s all ease;
+}
+
+/* Advanced Checkbox Hack */
+/* line 151, ../sass/_nav.scss */
+body {
+  -webkit-animation: bugfix infinite 1s;
+}
+
+@-webkit-keyframes bugfix {
+  /* line 153, ../sass/_nav.scss */
+  from {
+    padding: 0;
+  }
+
+  /* line 153, ../sass/_nav.scss */
+  to {
+    padding: 0;
+  }
+}
+
+/* line 156, ../sass/_nav.scss */
+input#menu[type=checkbox] {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+/* line 162, ../sass/_nav.scss */
+#btn-mobile-menu {
+  padding: 0 5px;
+  width: 44px;
+  display: block;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  width: 60px;
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 5px;
+  z-index: 300000;
+  border: 1px solid #555;
+  -moz-box-shadow: inset 0px 1px 0px 0px #999;
+  -webkit-box-shadow: inset 0px 1px 0px 0px #999;
+  box-shadow: inset 0px 1px 0px 0px #999;
+  background-color: transparent;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  border: 1px solid #000;
+  border-color: #000 #000 #555 #000;
+  display: inline-block;
+  color: #ddd!important;
+  text-decoration: none;
+  text-shadow: 1px 1px 0px #444;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* line 193, ../sass/_nav.scss */
+html,
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* line 198, ../sass/_nav.scss */
+#nav-site {
+  background: rgba(0, 0, 0, 0.5);
+  border-left: 1px solid #000;
+  position: absolute;
+  left: -100%;
+  width: 76%;
+  display: block;
+  bottom: 10px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.5);
+  top: 65px;
+}
+/* line 209, ../sass/_nav.scss */
+#nav-site ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: auto;
+}
+/* line 214, ../sass/_nav.scss */
+#nav-site ul li {
+  border-bottom: 1px solid #000;
+  border-top: 1px solid #222;
+}
+/* line 217, ../sass/_nav.scss */
+#nav-site ul li:first-child {
+  border-top: 1px solid #000;
+}
+/* line 219, ../sass/_nav.scss */
+#nav-site ul li:first-child a {
+  border-top: 0px;
+}
+/* line 223, ../sass/_nav.scss */
+#nav-site ul li:last-child {
+  border-bottom: 1px solid #222;
+}
+/* line 225, ../sass/_nav.scss */
+#nav-site ul li:last-child a {
+  border-bottom: 1px solid #000;
+}
+/* line 229, ../sass/_nav.scss */
+#nav-site ul li a {
+  color: #fff!important;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  color: #5d5d5d;
+  display: block;
+  text-decoration: none;
+  height: 45px;
+  line-height: 45px;
+  padding-left: 15px;
+  border-left: 1px solid #222;
+}
+/* line 242, ../sass/_nav.scss */
+#nav-site ul ul > li {
+  height: 100%;
+  width: 100%;
+  text-align: left;
+  margin: 0;
+}
+/* line 247, ../sass/_nav.scss */
+#nav-site ul ul > li:hover {
+  box-shadow: inset 0 0 0 0.15em rgba(255, 255, 255, 0.45);
+}
+
+/* line 253, ../sass/_nav.scss */
+#btn-mobile-menu {
+  display: block;
+  width: 30px;
+  text-align: center;
+  cursor: pointer;
+  margin-left: -1%;
+}
+
+/* line 264, ../sass/_nav.scss */
+label:after {
+  content: "\2261";
+  font-size: 1.8em;
+}
+
+/* line 269, ../sass/_nav.scss */
+#btn-mobile-menu:hover,
+input:checked ~ #btn-mobile-menu {
+  color: #000;
+}
+
+/* line 272, ../sass/_nav.scss */
+input:checked ~ nav[role="off-canvas"] {
+  opacity: 1;
+  width: 75%;
+  left: 0!important;
+}
+/* line 277, ../sass/_nav.scss */
+input:checked ~ nav[role="off-canvas"] ul > li:hover {
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFA14C4C', endColorstr='#FF8F1313');
+}
+/* line 280, ../sass/_nav.scss */
+input:checked ~ nav[role="off-canvas"] ul > li:after {
+  position: absolute;
+  right: .25em;
+  font: normal 50px sans-serif;
+  color: inherit;
+}
+/* line 287, ../sass/_nav.scss */
+input:checked ~ nav[role="off-canvas"] li a {
+  padding: 0;
+}
+
+/* line 291, ../sass/_nav.scss */
+input:checked ~ #content {
+  margin-left: 73%;
+  width: 75%;
+  margin-right: 25%;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+/* line 1, ../sass/_card-overlay.scss */
+#coverflow-card-overlay-container {
+  background-color: #000;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.7) 0 0 10px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.7) 0 0 10px;
+  box-shadow: rgba(0, 0, 0, 0.7) 0 0 10px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  border-radius: 7px;
+  height: 700px;
+  left: 50%;
+  margin-left: -200px;
+  top: 50%;
+  margin-top: -350px;
+  position: absolute;
+  width: 400px;
+  z-index: 80;
+}
+/* line 17, ../sass/_card-overlay.scss */
+#coverflow-card-overlay-container #coverflow-card-overlay {
+  -webkit-box-shadow: rgba(255, 255, 255, 0.6) 0px 0px 20px;
+  -moz-box-shadow: rgba(255, 255, 255, 0.6) 0px 0px 20px;
+  box-shadow: rgba(255, 255, 255, 0.6) 0px 0px 20px;
+  height: 600px;
+  margin: 50px;
+  position: absolute;
+  width: 300px;
+}
+/* line 25, ../sass/_card-overlay.scss */
+#coverflow-card-overlay-container #coverflow-card {
+  height: 600px;
+  width: 300px;
+}
+/* line 32, ../sass/_card-overlay.scss */
+#coverflow-card-overlay-container #coverflow-card-fan-plus,
+#coverflow-card-overlay-container #coverflow-card-fan-checked,
+#coverflow-card-overlay-container #coverflow-card-close {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 90px;
+  z-index: 10;
+}
+/* line 39, ../sass/_card-overlay.scss */
+#coverflow-card-overlay-container #coverflow-card-fan-plus .btn span,
+#coverflow-card-overlay-container #coverflow-card-fan-checked .btn span,
+#coverflow-card-overlay-container #coverflow-card-close .btn span {
+  background: url("../images/vfnzone-community-sprites.png") no-repeat 1px -100px;
+  display: block;
+  height: 28px;
+  width: 55px;
+}
+/* line 49, ../sass/_card-overlay.scss */
+#coverflow-card-overlay-container #coverflow-card-fan-plus .btn,
+#coverflow-card-overlay-container #coverflow-card-fan-checked .btn {
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -o-border-radius: 0px;
+  border-radius: 0px;
+  -moz-border-radius-topleft: 5px;
+  -webkit-border-top-left-radius: 5px;
+  border-top-left-radius: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.7) 0px 1px 5px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.7) 0px 1px 5px;
+  box-shadow: rgba(0, 0, 0, 0.7) 0px 1px 5px;
+  border-right: none;
+  padding: 0px;
+}
+/* line 59, ../sass/_card-overlay.scss */
+#coverflow-card-overlay-container #coverflow-card-fan-checked .btn span {
+  background-position: 1px -150px;
+}
+/* line 64, ../sass/_card-overlay.scss */
+#coverflow-card-overlay-container #coverflow-card-close {
+  top: -40px;
+  right: -40px;
+}
+/* line 68, ../sass/_card-overlay.scss */
+#coverflow-card-overlay-container #coverflow-card-close .btn {
+  background-color: #555;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSI2JSIgc3RvcC1jb2xvcj0iIzY2NjY2NiIvPjxzdG9wIG9mZnNldD0iNzAlIiBzdG9wLWNvbG9yPSIjMzMzMzMzIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjNTU1NTU1Ii8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(6%, #666666), color-stop(70%, #333333), color-stop(100%, #555555));
+  background-image: -webkit-linear-gradient(#666666 6%, #333333 70%, #555555 100%);
+  background-image: -moz-linear-gradient(#666666 6%, #333333 70%, #555555 100%);
+  background-image: -o-linear-gradient(#666666 6%, #333333 70%, #555555 100%);
+  background-image: linear-gradient(#666666 6%, #333333 70%, #555555 100%);
+  padding: 2px;
+}
+/* line 74, ../sass/_card-overlay.scss */
+#coverflow-card-overlay-container #coverflow-card-close .btn span {
+  background-position: 1px 1px;
+  height: 19px;
+  width: 19px;
+}
+/* line 81, ../sass/_card-overlay.scss */
+#coverflow-card-overlay-container .bubble {
+  top: 40%;
+  font-size: 0.80em;
+}
+
+/*
+Site: VFN Platform
+Type: Page Structure
+Author: Fernando Medina
+URL: 
+
+### TABLE OF CONTENTS ############################
+
+	Remaining styles. Please refactor as you see fit
+
+################################################*/
+/* line 13, ../sass/_general-styles.scss */
+div.wait-spinner {
+  display: none;
+  padding-top: 5px;
+}
+
+/* line 21, ../sass/_general-styles.scss */
+.cols {
+  overflow: hidden;
+  *zoom: 1;
+}
+
+/* line 25, ../sass/_general-styles.scss */
+.col {
+  /*	@media only screen and ( max-width: 1200px ) {
+  		float:none;
+  		width:100% !important;
+  		margin-right: 0;
+      }
+      */
+}
+
+/* line 40, ../sass/_general-styles.scss */
+.col.first-col {
+  border-bottom: 1px solid #ddd;
+  padding-top: 0;
+  /*	@media only screen and ( max-width: 1200px ) {
+  		border-bottom:1px solid #ddd;
+  	} */
+}
+
+/********************************* SPECIFIC ELEMENTS */
+/* line 50, ../sass/_general-styles.scss */
+div.success {
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  border-radius: 7px;
+  background: #75b868;
+  color: #d4e9d0;
+  font-size: 1.5em;
+  font-style: italic;
+  margin: 10px 0;
+  padding: 20px 3% 3% 3%;
+  text-align: center;
+}
+
+/********************************* BUTTONS AND LINKS */
+/* line 63, ../sass/_general-styles.scss */
+div.buttons {
+  margin-top: 20px;
+}
+
+/* line 71, ../sass/_general-styles.scss */
+.btn,
+a.btn,
+a.btn-lo-em,
+.deform button {
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  border-radius: 7px;
+  -webkit-box-shadow: #999999 0 1px 0 0 inset;
+  -moz-box-shadow: #999999 0 1px 0 0 inset;
+  box-shadow: #999999 0 1px 0 0 inset;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.3) 0 1px 0 0 inset;
+  -moz-box-shadow: rgba(255, 255, 255, 0.3) 0 1px 0 0 inset;
+  box-shadow: rgba(255, 255, 255, 0.3) 0 1px 0 0 inset;
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px 15px;
+  text-decoration: none;
+}
+
+/* line 89, ../sass/_general-styles.scss */
+.btn,
+a.btn,
+.deform button {
+  background-color: #90271d;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSI2JSIgc3RvcC1jb2xvcj0iI2JhMzMyNiIvPjxzdG9wIG9mZnNldD0iOTQlIiBzdG9wLWNvbG9yPSIjOTAyNzFkIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(6%, #ba3326), color-stop(94%, #90271d));
+  background-image: -webkit-linear-gradient(#ba3326 6%, #90271d 94%);
+  background-image: -moz-linear-gradient(#ba3326 6%, #90271d 94%);
+  background-image: -o-linear-gradient(#ba3326 6%, #90271d 94%);
+  background-image: linear-gradient(#ba3326 6%, #90271d 94%);
+  text-shadow: rgba(0, 0, 0, 0.9) 0px -1px 1px;
+  border: 1px solid #000;
+  color: #fff;
+}
+/* line 96, ../sass/_general-styles.scss */
+.btn:hover,
+a.btn:hover,
+.deform button:hover {
+  background-color: #d74a3c;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSI2JSIgc3RvcC1jb2xvcj0iI2Q3NGEzYyIvPjxzdG9wIG9mZnNldD0iOTQlIiBzdG9wLWNvbG9yPSIjYmEzMzI2Ii8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(6%, #d74a3c), color-stop(94%, #ba3326));
+  background-image: -webkit-linear-gradient(#d74a3c 6%, #ba3326 94%);
+  background-image: -moz-linear-gradient(#d74a3c 6%, #ba3326 94%);
+  background-image: -o-linear-gradient(#d74a3c 6%, #ba3326 94%);
+  background-image: linear-gradient(#d74a3c 6%, #ba3326 94%);
+  color: #fff;
+}
+
+/* line 104, ../sass/_general-styles.scss */
+header a,
+header .btn {
+  background: none;
+}
+/* line 107, ../sass/_general-styles.scss */
+header a:hover,
+header .btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* line 113, ../sass/_general-styles.scss */
+.grid .btn {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  font-size: 0.75em;
+  padding: 0px 5px;
+}
+
+/* line 120, ../sass/_general-styles.scss */
+.btn-lo-em,
+a.btn-lo-em {
+  background-color: #cccccc;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSI2JSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iOTQlIiBzdG9wLWNvbG9yPSIjY2NjY2NjIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(6%, #ffffff), color-stop(94%, #cccccc));
+  background-image: -webkit-linear-gradient(#ffffff 6%, #cccccc 94%);
+  background-image: -moz-linear-gradient(#ffffff 6%, #cccccc 94%);
+  background-image: -o-linear-gradient(#ffffff 6%, #cccccc 94%);
+  background-image: linear-gradient(#ffffff 6%, #cccccc 94%);
+  border: 1px solid #999;
+  color: #333;
+}
+/* line 126, ../sass/_general-styles.scss */
+.btn-lo-em:hover,
+a.btn-lo-em:hover {
+  background-color: #fff;
+}
+
+/* line 132, ../sass/_general-styles.scss */
+.btn.sm,
+.btn-lo-em.sm {
+  font-size: .8em;
+  padding: 3px 10px;
+}
+
+/* line 137, ../sass/_general-styles.scss */
+#reg .btn {
+  margin: 20px 0;
+}
+
+/********************************* BUBBLES */
+/* line 142, ../sass/_general-styles.scss */
+.bubble {
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  border-radius: 7px;
+  background-color: silver;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwcHgiIHN0b3AtY29sb3I9IiM0ODQ4NDgiLz48c3RvcCBvZmZzZXQ9IjIwcHgiIHN0b3AtY29sb3I9IiMwMzAzMDMiLz48c3RvcCBvZmZzZXQ9IjIxcHgiIHN0b3AtY29sb3I9IiNmZmZmZmYiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjMGMwYzAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0px, #484848), color-stop(20px, #030303), color-stop(21px, #ffffff), color-stop(100%, #c0c0c0));
+  background-image: -webkit-linear-gradient(#484848 0px, #030303 20px, #ffffff 21px, #c0c0c0 100%);
+  background-image: -moz-linear-gradient(#484848 0px, #030303 20px, #ffffff 21px, #c0c0c0 100%);
+  background-image: -o-linear-gradient(#484848 0px, #030303 20px, #ffffff 21px, #c0c0c0 100%);
+  background-image: linear-gradient(#484848 0px, #030303 20px, #ffffff 21px, #c0c0c0 100%);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 5px 10px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 5px 10px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 5px 10px;
+  color: #666;
+  padding: 30px 10px 10px 10px;
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  top: 40%;
+  z-index: 20;
+}
+/* line 156, ../sass/_general-styles.scss */
+.bubble div.logo {
+  background: url(/app.collection.static/images/vfnzone-community-sprites.png) no-repeat 0px -50px;
+  position: absolute;
+  height: 21px;
+  left: 0;
+  top: 0;
+  width: 100px;
+  z-index: 2;
+}
+
+/* from http://css-tricks.com/examples/ShapesOfCSS/ 
+  Not working yet
+*/
+/*
+.bubble:after {
+   content:"";
+   position: absolute;
+   right: 100%;
+   top: 26px;
+   width: 0;
+   height: 0;
+   border-top: 13px solid transparent;
+   border-right: 26px solid red;
+   border-bottom: 13px solid transparent;
+}
+*/
+/********************************* TABLES */
+/* line 187, ../sass/_general-styles.scss */
+table.grid td {
+  border-bottom: 1px solid #ddd;
+  padding: 2px;
+  font-size: 0.85em;
+}
+/* line 192, ../sass/_general-styles.scss */
+table.grid thead td {
+  background-color: #eee;
+  color: #666;
+}
+/* line 196, ../sass/_general-styles.scss */
+table.grid p {
+  color: #333;
+  display: inline-block;
+  margin: 0 !important;
+  padding: 5px 0;
+}
+
+/* line 204, ../sass/_general-styles.scss */
+#profiles.grid {
+  margin-top: 10px;
+  width: 100%;
+}
+
+/* line 208, ../sass/_general-styles.scss */
+.grid p.desc {
+  color: inherit;
+  width: 150px;
+}
+
+/********************************* FORM OVERRIDES */
+/* line 223, ../sass/_general-styles.scss */
+.deform button {
+  font-size: 1em !important;
+}
+/* line 226, ../sass/_general-styles.scss */
+.deform li {
+  overflow: hidden;
+  *zoom: 1;
+  clear: both;
+  display: block;
+  height: 100%;
+  margin: 2px 0 !important;
+  padding: 5px 0 !important;
+  position: relative;
+}
+/* line 234, ../sass/_general-styles.scss */
+.deform li .checkboxes li {
+  padding: 0 !important;
+}
+/* line 237, ../sass/_general-styles.scss */
+.deform li .header {
+  border-bottom: 1px solid #aaa !important;
+  margin-top: 2em !important;
+}
+/* line 240, ../sass/_general-styles.scss */
+.deform li .header:first-child {
+  margin-top: 0 !important;
+}
+
+/* line 251, ../sass/_general-styles.scss */
+.review .deform li {
+  border-bottom: 1px solid #eee;
+}
+
+/* line 257, ../sass/_general-styles.scss */
+.req, .deform .req {
+  color: #cc0000 !important;
+  font-size: 1.7em;
+  vertical-align: middle;
+}
+
+/* line 268, ../sass/_general-styles.scss */
+.deform label,
+.deform div.control,
+.deform .form-item-description,
+.deform div.error {
+  display: block;
+  float: left;
+  line-height: 30px;
+  margin-top: 0;
+  margin-right: 10px;
+  padding: 0;
+}
+/* line 278, ../sass/_general-styles.scss */
+.deform div.control {
+  min-width: 500px;
+}
+@media only screen and (max-width: 900px) {
+  /* line 278, ../sass/_general-styles.scss */
+  .deform div.control {
+    min-width: 250px;
+  }
+}
+/* line 290, ../sass/_general-styles.scss */
+.deform select,
+.deform input {
+  border: 1px solid #ccc !important;
+  float: left;
+  font-size: 1em !important;
+  height: 30px !important;
+  line-height: 30px;
+  margin-right: 10px !important;
+  width: 180px;
+}
+/* line 301, ../sass/_general-styles.scss */
+.deform input {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px inset;
+  -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px inset;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px inset;
+  padding: 0 5px;
+}
+/* line 306, ../sass/_general-styles.scss */
+.deform label {
+  font-weight: normal !important;
+  width: 130px;
+}
+/* line 312, ../sass/_general-styles.scss */
+.deform li.controls.checkbox div.control,
+.deform li.controls .checkboxes div.control {
+  min-width: 25px;
+  width: 25px;
+}
+
+/* line 320, ../sass/_general-styles.scss */
+.login .deform label,
+.agreement .deform label {
+  width: 170px;
+}
+
+/* line 325, ../sass/_general-styles.scss */
+.deform li .checkboxes label,
+.review .deform label {
+  width: 250px;
+}
+@media only screen and (max-width: 500px) {
+  /* line 325, ../sass/_general-styles.scss */
+  .deform li .checkboxes label,
+  .review .deform label {
+    float: none !important;
+    margin-bottom: 5px;
+    width: 100%;
+  }
+}
+
+/* line 336, ../sass/_general-styles.scss */
+.deform p,
+div.control {
+  display: inline-block;
+  margin-top: 0;
+}
+
+/* line 345, ../sass/_general-styles.scss */
+.review label,
+.review .deform div.control,
+.review .deform .form-item-description,
+.review .deform div.error {
+  line-height: 120%;
+}
+/* line 351, ../sass/_general-styles.scss */
+.review .deform p,
+.review div.control,
+.review li.control span,
+.review li.control em {
+  color: #333;
+  font-weight: 600;
+}
+
+/* line 360, ../sass/_general-styles.scss */
+.deform li.controls.checkbox label,
+.deform li .checkboxes label {
+  float: none;
+  line-height: 30px;
+  width: auto;
+}
+
+/* line 366, ../sass/_general-styles.scss */
+.deform div.form-item-description {
+  color: #999999;
+  font-size: 0.85em;
+  font-style: italic;
+  line-height: 30px;
+  white-space: normal;
+}
+
+/* line 376, ../sass/_general-styles.scss */
+.deform li.controls.error {
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  border-radius: 7px;
+  background: rgba(204, 0, 0, 0.1);
+  padding-left: 5px !important;
+}
+/* line 380, ../sass/_general-styles.scss */
+.deform li.controls.error .control {
+  min-width: 180px;
+}
+
+/* line 386, ../sass/_general-styles.scss */
+.deform li.controls.error div.form-item-description {
+  display: none;
+}
+
+/* line 390, ../sass/_general-styles.scss */
+.deform li.errorLi {
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  border-radius: 7px;
+  background-color: #f8e09e;
+  border: 2px solid #cc0000, 0.5;
+  color: #cc0000;
+  padding: 10px !important;
+}
+/* line 396, ../sass/_general-styles.scss */
+.deform li.errorLi h3 {
+  font-size: 1.5em;
+  margin: 5px;
+}
+
+/* line 402, ../sass/_general-styles.scss */
+.deform input[type="checkbox"] {
+  line-height: 30px;
+  margin-bottom: 0;
+  margin-top: 0;
+  width: auto !important;
+}
+
+/* line 409, ../sass/_general-styles.scss */
+.deform div.error {
+  color: #cc0000;
+  font-size: 0.8em;
+  font-weight: bold !important;
+}
+
+/* line 417, ../sass/_general-styles.scss */
+#agreement-controls input {
+  width: 50px;
+}
+
+/************************************ STATIC CONTENT */
+/* line 424, ../sass/_general-styles.scss */
+.content.static h1 {
+  color: #666;
+  font-style: normal;
+  text-shadow: none;
+}
+/* line 429, ../sass/_general-styles.scss */
+.content.static h2 {
+  color: #333 !important;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+/* line 434, ../sass/_general-styles.scss */
+.content.static ol {
+  list-style-type: lower-alpha;
+  margin-left: 30px;
+}
+/* line 438, ../sass/_general-styles.scss */
+.content.static ol ol {
+  list-style-type: decimal;
+}
+/* line 441, ../sass/_general-styles.scss */
+.content.static li {
+  margin-bottom: 10px;
+}
+/* line 445, ../sass/_general-styles.scss */
+.content.static div#logos div {
+  display: inline-block;
+  height: 65px;
+  margin-right: 20px;
+  width: 190px;
+}
+/* line 451, ../sass/_general-styles.scss */
+.content.static div#logos #logo-amplifysocial {
+  background: url("../images/Amplify-Social-190x65.png") no-repeat;
+}
+/* line 454, ../sass/_general-styles.scss */
+.content.static div#logos #logo-vfn {
+  background: url("../images/VFN-logo-horz-on-white-190x65.png") no-repeat;
+}
+/* line 457, ../sass/_general-styles.scss */
+.content.static div#logos #logo-vfnzone {
+  background: url("../images/VFNZone-logo-horz-on-white-204x65.png") no-repeat;
+  width: 204px;
+}
+/* line 462, ../sass/_general-styles.scss */
+.content.static p.doc-version {
+  color: #999;
+  font-size: .7em;
+  text-align: right;
+}
+
+/*
+Site: VFN Platform
+Type: Responsive media
+Author: Fernando Medina
+URL: 
+
+### TABLE OF CONTENTS ############################
+
+EXAMPLE Media Queries for Responsive Design. Theses examples override the primary ('mobile first') styles.
+Modify as content requires.
+
+
+################################################*/
+/* line 15, ../sass/_media-responsive.scss */
+#coverflow-card-overlay-container {
+  display: none;
+}
+
+/* Style adjustments for viewports that meet the condition */
+@media only screen and (min-width: 561px) {
+  /* line 22, ../sass/_media-responsive.scss */
+  #btn-mobile-menu {
+    display: none;
+  }
+
+  /* line 25, ../sass/_media-responsive.scss */
+  body, html {
+    overflow: inherit!important;
+    line-height: 120%;
+    margin: 0 0 1em 0;
+  }
+
+  /* line 31, ../sass/_media-responsive.scss */
+  #container, #logo-vfn,
+  header #user, footer {
+    width: 94%;
+    max-width: 840px;
+    margin: 0 auto;
+    padding: 0 2%;
+  }
+
+  /* line 37, ../sass/_media-responsive.scss */
+  #logo-vfn {
+    background-position: left top!important;
+  }
+
+  /* line 40, ../sass/_media-responsive.scss */
+  header #user {
+    display: block!important;
+    margin-top: 6px;
+    padding-right: -2%;
+    text-align: right;
+    padding-right: 0;
+    width: 94%;
+  }
+
+  /* line 48, ../sass/_media-responsive.scss */
+  footer {
+    padding: 8px 0px 10px 0;
+  }
+
+  /* line 52, ../sass/_media-responsive.scss */
+  .grid .email,
+  .grid .profile-created {
+    display: block;
+  }
+
+  /* line 55, ../sass/_media-responsive.scss */
+  #container {
+    margin-top: 75px;
+    position: relative;
+  }
+  /* line 58, ../sass/_media-responsive.scss */
+  #container #nav-site {
+    position: absolute;
+    left: 34px!important;
+    display: block;
+    position: absolute;
+    bottom: 25px;
+    width: 190px;
+    font-weight: lighter;
+    background: rgba(0, 0, 0, 0.4);
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    border-radius: 7px;
+    border: 0px;
+  }
+  /* line 69, ../sass/_media-responsive.scss */
+  #container #nav-site ul {
+    left: 0;
+    top: 0;
+  }
+  /* line 72, ../sass/_media-responsive.scss */
+  #container #nav-site ul li {
+    border-bottom: 1px solid #111;
+    border-top: 1px solid #333;
+  }
+  /* line 76, ../sass/_media-responsive.scss */
+  #container #nav-site ul li:first-child {
+    border-top: 0px;
+  }
+  /* line 80, ../sass/_media-responsive.scss */
+  #container #nav-site ul li:last-child {
+    border-bottom: 1px solid #333;
+  }
+  /* line 83, ../sass/_media-responsive.scss */
+  #container #nav-site ul li:last-child a {
+    border-bottom: 1px solid #111;
+  }
+  /* line 91, ../sass/_media-responsive.scss */
+  #container #container, #container #logo-vfn, #container header #user {
+    width: 94%;
+    max-width: 840px;
+    margin: 0 auto;
+    padding: 0 2%;
+  }
+  /* line 97, ../sass/_media-responsive.scss */
+  #container #logo-vfn {
+    background-position: left top!important;
+  }
+  /* line 100, ../sass/_media-responsive.scss */
+  #container header #user {
+    display: block!important;
+    margin-top: 6px;
+    padding-right: -2%;
+    text-align: right;
+    padding-right: 0;
+    width: 94%;
+  }
+  /* line 109, ../sass/_media-responsive.scss */
+  #container .grid .email,
+  #container .grid .profile-created {
+    display: block;
+  }
+  /* line 112, ../sass/_media-responsive.scss */
+  #container #nav-site, #container #content {
+    top: 80px;
+  }
+  /* line 115, ../sass/_media-responsive.scss */
+  #container #content {
+    left: 234px!important;
+    bottom: 25px;
+    padding: 0;
+    right: 34px!important;
+    width: auto;
+  }
+  /* line 122, ../sass/_media-responsive.scss */
+  #container #title {
+    position: absolute;
+    left: 34px;
+  }
+  /* line 126, ../sass/_media-responsive.scss */
+  #container #title h1 {
+    line-height: inherit;
+    top: 1.5%;
+  }
+  /* line 130, ../sass/_media-responsive.scss */
+  #container header #logo-vfn {
+    position: absolute;
+    margin-left: 12%;
+    width: 840px;
+  }
+
+  /* 
+  Print styles.
+  Inlined to avoid required HTTP connection: h5bp.com/r 
+  ========================================================================== */
+}
+@media only screen and (min-width: 561px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: 561px) and (min-resolution: 144dpi) {
+  /* Style adjustments for high resolution devices  */
+}

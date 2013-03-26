@@ -1,0 +1,333 @@
+  @import "compass";
+@import "compass/css3/border-radius";
+@import "compass/css3/opacity";
+@import "compass/css3/transition";
+
+@import "_mixins.scss";
+
+body {
+  background:#363636 url("../assets/bg-dimensions-1024.gif") no-repeat 0 0;
+  color:white;
+  font-family: sans-serif;
+  font-size: .8em;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 1.3em;
+  white-space: normal !important;
+}
+
+h2 {
+  font-size: 1.1em;
+}
+
+#report {
+  top:20px;
+  right:20px;
+  bottom:20px;
+  left:20px;
+  position: absolute;
+  z-index: 2;
+}
+
+#vfc {
+  background-color: rgba(black,0.2);
+  position: absolute;
+  top:10px;
+  right:10px;
+  bottom:10px;
+  left:10px;
+  z-index: 1;
+}
+
+
+#report
+{
+  span {
+    @include border-radius(5px);
+    background: rgba(white,0.2);
+    display:none;
+    margin:2px 0;
+    padding:3px 5px;
+  }
+  
+  span#no-match {
+    display:inline-block;
+  }
+}
+
+span.no-hide {
+  display:inline-block !important;  
+}
+
+/*-------------------------------- MEDIA QUERIES -------------------------*/
+
+/*
+@media
+//screen and (min-width:640px),
+screen and (max-device-width: 640px)
+{
+// smartphones
+  #report {
+    span#sm {
+      display: inline-block;
+    }
+  }
+  #display-strategy span#s1 {
+    display:inline-block !important;
+    &:before {
+      content:"Phone: minDW < 640";
+    }
+  }
+}
+
+
+@media
+//screen and (min-width: 768px) and (max-width:1024px),
+screen and (min-device-width: 768px) and (max-device-width: 1024px)
+
+{
+// tablets
+  #vfc {
+    @include vfc-fw();
+  }
+  #report {
+    span#lg {
+      display: inline-block;
+    }
+  }
+  #display-strategy span#s2 {
+    display:inline-block !important;
+    &:before {
+      content:"minDW 768; maxDW 1024";
+    }
+  }
+}
+*/
+
+
+#report-device span#s0 {
+  display:inline-block !important;
+  &:before {
+    //content:"Mobile default";
+  }
+}
+#display-strategy span#s1 {
+  display:inline-block !important;
+  &:before {
+    //content:"Flex to fit";
+  }
+}
+
+#display-strategy span#s2 {
+  display:inline-block !important;
+  &:before {
+    content:"Portrait Nav";
+  }
+}
+
+/*
+@media
+//screen and (max-device-width: 800px) and (max-device-height:800px)
+screen and (max-width: 768px),
+screen and (max-height:768px)
+{
+// tablets
+  #report-device span#s0 {
+    display:inline-block !important;
+    &:before {
+      content:"Under threshold";
+    }
+  }
+  #display-strategy span#s1 {
+    display:inline-block !important;
+    &:before {
+      content:"Flex to fit";
+    }
+  }
+}
+*/
+
+@media
+screen and (orientation:landscape) and (max-width:400px),
+screen and (orientation:landscape) and (max-height:400px)
+{
+  #display-strategy span#s1 {
+    display:inline-block !important;
+    &:before {
+      content:"Card Fullscreen";
+    }
+  }
+  #display-strategy span#s2 {
+    display:inline-block !important;
+    &:before {
+      content:"Landscape Nav";
+    }
+  }
+}
+
+@media
+//screen and (min-device-width: 800px) and (min-device-height:800px)
+//screen and (min-device-width: 768px) and (min-device-height:768px) and (min-width: 401px) and (min-height:650px)
+screen and (min-device-width: 768px) and (min-device-height:768px) and (min-width: 400px) and (min-height:400px)
+{
+// desktops, larger tablets, card unbounded
+  #vfc {
+    @include vfc-fwh();
+  }
+  #report-device span#s0 {
+    display:inline-block !important;
+    &:before {
+      content:"Over threshold";
+    }
+  }
+  #display-strategy span#s1 {
+    display:inline-block !important;
+    &:before {
+      content:"Card fixed width and height on background";
+    }
+  }
+}
+
+/*
+
+@media
+screen and (min-device-width: 1024px) and (min-width: 420px) and (max-height:570px)
+{
+// desktops, compressed vertical space
+  #vfc {
+    @include vfc-fw();
+  }
+  #report-device span#s0 {
+    display:inline-block !important;
+    &:before {
+      content:"Desktop or tablet, card constrained vertically";
+    }
+  }
+  #display-strategy span#s1 {
+    display:inline-block !important;
+    &:before {
+      content:"Fixed width";
+    }
+  }
+}
+
+*/
+
+
+/*
+
+@media
+//only screen and (max-device-width: 16cm),
+only screen and (max-height:500px) and (orientation:landscape),
+only screen and (max-width:300px) and (orientation:portrait)
+{
+  // Targets phones and smaller devices
+  #vfc {
+    //background-color: rgba(yellow,0.7);
+  }
+  
+  #report {
+    span#sm {
+      display: inline-block;
+    }
+  }
+}
+
+@media
+//only screen and (min-device-width: 16cm),
+only screen and (min-height:500px) and (orientation:landscape),
+only screen and (min-width:300px) and (orientation:portrait)
+{
+  // Targets tablets and larger displays
+  #vfc {
+    //background-color: rgba(black,0.7);
+    @include vfc-fw();
+  }
+  
+  #report {
+    span#lg {
+      display: inline-block;
+    }
+  }
+}
+
+*/
+@media 
+only screen and (max-resolution : 96dpi),
+only screen and (-webkit-max-device-pixel-ratio: 1)
+{
+  #report-ppi {
+    span#ppiLo {
+      display:inline-block;
+    }
+  
+    span#no-match {
+      display:none;
+    }
+  }
+}
+
+@media 
+only screen and (min-resolution : 97dpi) and (max-resolution : 191dpi),
+only screen and (-webkit-min-device-pixel-ratio : 1.1 ) and (-webkit-max-device-pixel-ratio : 1.9)
+{
+  #report-ppi {
+    span#ppiMd {
+     display:inline-block;
+    }
+  
+    span#no-match {
+      display:none;
+    }
+  }
+}
+
+@media 
+only screen and (min-resolution : 192dpi),
+only screen and (-webkit-min-device-pixel-ratio : 2 ) 
+{
+  #report-ppi {
+    span#ppiHi {
+      display:inline-block;
+    }
+  
+    span#no-match {
+      display:none;
+    }
+  }
+}
+
+
+@media (orientation : portrait) {
+  #report-orientation {
+    span#s1 {
+      display:inline;
+    }
+    span#s1:before {
+      content:"Portrait";
+    }
+  }
+  body {
+    //@include vfc-color(red); 
+  }
+}
+
+@media (orientation : landscape) {
+  #report-orientation {
+    span#s1 {
+      display:inline;
+    }
+    span#s1:before {
+      content:"Landscape";
+    }
+  }
+  body {
+    //@include vfc-color(green); 
+  }
+}
+
+
+    

@@ -1,0 +1,29 @@
+@mixin vfc-color($color) {
+  background-color: rgba($color,0.5);
+}
+
+@mixin vfc-fwh() {
+  //background-color: rgba(red,0.5);
+  border:solid black 2px;
+  top:50%;
+  right:auto;
+  bottom:auto;
+  left:50%;
+  height: 550px;
+  width:300px;
+  margin-left:-150px;
+  margin-top:-275px;
+}
+
+@mixin vfc-fw() {
+  //background-color: rgba(red,0.5);
+  border:dashed black 2px;
+  top:10px;
+  right:auto;
+  bottom:10px;
+  left:50%;
+  height: auto;
+  min-height: 250px;
+  width:300px;
+  margin-left:-150px;
+}
