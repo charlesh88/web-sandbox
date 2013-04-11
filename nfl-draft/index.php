@@ -21,6 +21,9 @@
       </div>
       <img class="bg" src="static/images/featured-nfl-draft-2013.jpg" />
     </div>
+    <div class="cta">
+      Are you an athlete? <a href="" class="btn">Join the Sqor Team<img class="arw" src="static/images/arw-sm-right.png" /></a>
+    </div>
     <!-- / actual component -->
   </div>
 </body>

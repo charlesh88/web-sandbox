@@ -56,7 +56,7 @@ body {
 img.bg {
   display: block;
   position: absolute;
-  top: 0; right: -300px; bottom: auto; left: auto;
+  top: auto; right: -300px; bottom: 0; left: auto;
   height: auto; width: 100%;
   min-width: 1005px;
   z-index: 0;
@@ -72,6 +72,7 @@ h1,
 
 .cta {
   color: #fff;
+  display: none; // Hide the version of the cta that's outside #content-wrapper
   font-size: 0.8em;
   margin-top: 10px;
   .btn {
@@ -102,6 +103,9 @@ h1,
   height: auto; 
   width: percentage($contentW);
   z-index: 1;
+  .cta {
+    display: block;
+  }
 }
 
 
@@ -126,25 +130,39 @@ h2.sub-headline {
 }
 
 @media
-screen and (min-width: 1300px) {
+screen and (min-width: 600px) {
   img.bg {
-    top: -50px;
+    right: -100px !important;
+  }
+  h1.headline {
+    font-size: 1.6em;
   }
 }
 
 @media
-screen and (min-width: 700px) {
+screen and (min-width: 900px) {
+}
+
+@media
+screen and (min-width: 900px) {
   img.bg {
-    right: auto;
+    right: 0px !important;
   }
   .content-wrapper {
     width: 470px - ($sidePad*2) !important;
+    .cta {
+      display: none;
+    }
   }
   
   .cta {
+    //background: rgba(yellow, 0.3);
+    display: block;
     font-size: 1em;
-    margin-top: 25px;
     position: absolute;
+    right: 0;
+    top: 170px;
+    width: 220px;
     z-index: 2;
     img.arw {
       height: 11px !important;
@@ -164,8 +182,6 @@ screen and (min-width: 700px) {
 screen and (min-width: 350px) {
   .content-wrapper {
     padding: 20px $sidePad*1.5;
-  }
-  .content-wrapper {
-    width: percentage($contentW*0.8);    
+    width: percentage($contentW*0.8); 
   }
 }
