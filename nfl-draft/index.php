@@ -5,12 +5,12 @@
 <!DOCTYPE html>
 <head>
 
-<link href="static/css/screen.css" rel="stylesheet" />
+<link href="static/css/standalone.css" rel="stylesheet" />
 </head>
 <body>
   <div class="app-widget app-widget-feature-story">
     <!-- actual component -->
-    <div class="widget-wrapper">
+    <div class="feature-story">
       <div class="content-wrapper">
         <h1 class="headline">Behind the scenes <span class="em">2013 NFL Draft</span></h1>
         <h2 class="sub-headline">Follow all of the action - exclusive draft videos published by professional athletes</h2>
