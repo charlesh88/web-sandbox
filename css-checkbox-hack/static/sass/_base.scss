@@ -1,0 +1,96 @@
+/*
+Site: VFN Platform
+Type: Base Styles, Variables and Reuseable mixins
+Author: Fernando Medina
+URL: 
+
+### TABLE OF CONTENTS ############################
+
+	HTML Tags
+	Compass Variables
+	Reusable Mix-Ins
+
+################################################*/
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+$bgDebug: rgba(0,255,0,0.2);
+$vfnGold: #ffad31;
+$vfnRed: #ba3326;
+$vfnGry: #373737;
+$vfnLite:#fff;
+$fgBody: #ccc;
+$bgBody: #666;
+$fgContent: #666;
+$bgContent: #fff;
+$containerTBPadding: 20px;
+$containerPadding: 20px 3% 3% 3%;
+$displayWidth: 60%;
+$displayWidthNarrow: 90%;
+$displayWidthAdjusted: $displayWidth; // - ($containerPadding*2); 
+$crLg:10px;
+$crMd:7px;
+$crSm:5px;
+$vfnShadow: rgba(black, 0.7);
+$vfnShadowLite: rgba(black, 0.3);
+$sprites: '../images/sprites.png';
+$fontTitles: 'Titillium Web', Helvetica, Arial, sans-serif;
+$fontTitlesStyle: '600italic';
+$fontBody: 'Lato', Helvetica, Arial, sans-serif;
+$fontSizeNormal: 1em;
+$fontSizeLg: 1.5em;
+$fontSizeSm: .85em;
+$fontSizeVsm: .75em;
+$alertBg: #f8e09e;
+$alertFg: #c00;
+$btn1Base: #000;
+$defaultLineHeight: 120%;
+$formItemLineHeight: 30px;
+$inputW: 180px;
+
+/********************************* HTML TAGS */
+
+html, body {
+	overflow: auto;
+	height: 100%;
+	min-height: 100%;
+	text-shadow:0 0 1px #ddd;
+	font-weight: lighter;
+	
+}
+h1, h2 {
+	font-family: $fontTitles;
+	font-style: $fontTitlesStyle;
+	//line-height: $defaultLineHeight;
+}
+h1 {
+	@include text-shadow(rgba(black, 0.7) 0px 1px 5px);
+	color: $vfnGold;
+	font-style: italic;
+	font-size: 1.8em;
+}
+h2 {
+	font-size:1.3em;
+	margin:0 0 .25em 0;
+}
+p {
+	//font-size:$fontSizeSm;
+	margin:5px 0;
+}
+
+strong {
+	font-weight:bold;
+}
+a, a:visited {
+	color: $vfnRed;
+	text-decoration: none !important;
+	&:hover { color:red;}
+}
+iframe {
+  display: block;
+	overflow: hidden;
+}
+
+
+
+
+

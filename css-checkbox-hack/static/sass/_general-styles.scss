@@ -1,0 +1,476 @@
+/*
+Site: VFN Platform
+Type: Page Structure
+Author: Fernando Medina
+URL:
+
+### TABLE OF CONTENTS ############################
+
+	Remaining styles. Please refactor as you see fit
+
+################################################*/
+
+div.wait-spinner {
+  display: none;
+  padding-top: 5px;
+}
+
+
+
+
+.cols {
+	@include clearfix;
+}
+
+.col {
+	//background-color: rgba(255,255,0,0.1);
+	//background: $bgDebug;
+	//padding:10px;
+	//width: 50%;
+	//float: left;
+	//@include clearfix;
+/*	@media only screen and ( max-width: 1200px ) {
+		float:none;
+		width:100% !important;
+		margin-right: 0;
+    }
+    */
+}
+
+.col.first-col {
+	//margin-right: 5%;
+	border-bottom:1px solid #ddd;
+	padding-top:0;
+/*	@media only screen and ( max-width: 1200px ) {
+		border-bottom:1px solid #ddd;
+	} */
+}
+
+/********************************* SPECIFIC ELEMENTS */
+div.success {
+	@include border-radius($crMd);
+	background:#75b868;
+	color:lighten(#75b868,30);
+	font-size: $fontSizeLg;
+	font-style: italic;
+	margin:10px 0;
+	padding: $containerPadding;
+	text-align: center;
+}
+
+/********************************* BUTTONS AND LINKS */
+
+div.buttons {
+	margin-top:20px;
+}
+
+
+.btn,
+a.btn,
+a.btn-lo-em,
+.deform button {
+	@include border-radius($crMd);
+	//-moz-box-shadow:inset 0px 1px 0px 0px #999;
+	//-webkit-box-shadow:inset 0px 1px 0px 0px #999;
+	//box-shadow:inset 0px 1px 0px 0px #999;
+	@include box-shadow(#999 0 1px 0 0 inset);
+	@include box-shadow(rgba(255,255,255,0.3) 0 1px 0 0 inset);
+	cursor:pointer;
+	display:inline-block;
+	//font-family: $fontTitles;
+	//font-size: $fontSizeSm;
+//	line-height: 100%;
+	padding: 5px 15px;
+	text-decoration: none;
+}
+
+.btn,
+a.btn,
+.deform button {
+  $experimental-support-for-svg: true;
+  background-color: darken($vfnRed,10);
+	@include background-image(linear-gradient($vfnRed 6%, darken($vfnRed,10) 94%));
+	@include text-shadow(rgba(black, 0.9) 0px -1px 1px);
+	border: 1px solid #000;
+	color: #fff;
+	&:hover {
+		background-color: lighten($vfnRed,10);
+		@include background-image(linear-gradient(lighten($vfnRed,10) 6%, $vfnRed 94%));
+		color:#fff;
+	}
+}
+
+header a,
+header .btn {
+	//@include background-image(linear-gradient(lighten($btn1Base,20),lighten($btn1Base,30) 40%,$btn1Base 50%, lighten($btn1Base,20)));
+	background:transparent;
+		&:hover {
+		//@include background-image(linear-gradient(lighten($btn1Base,40),lighten($btn1Base,50) 40%,$btn1Base 50%, lighten($btn1Base,40)));
+		background: rgba(255,255,255,0.1);
+
+	}
+}
+header .btn {
+	border-bottom: 1px solid #555;
+	text-shadow:1px 1px 0px #111;
+  background: rgba(0,0,0,0.2);
+
+}
+#msg {
+	padding-right: 10px;
+}
+.grid .btn {
+	@include border-radius($crSm);
+	font-size: $fontSizeVsm;
+	padding:0px 5px;
+}
+
+.btn-lo-em,
+a.btn-lo-em {
+  $experimental-support-for-svg: true;
+  background-color: darken(#fff,20);
+	@include background-image(linear-gradient(#fff 6%, darken(#fff,20) 94%));
+	border: 1px solid #999;
+	color: #333;
+	&:hover {
+  	background-color:#fff;
+	}
+}
+
+.btn.sm,
+.btn-lo-em.sm {
+	font-size: .8em;
+	padding: 3px 10px;
+}
+
+#reg .btn {
+	margin:20px 0;
+}
+
+/********************************* BUBBLES */
+.bubble {
+  $experimental-support-for-svg: true;
+  @include border-radius($crMd);
+//  @include background-image(linear-gradient(rgba(255,255,255,1) 6%, rgba(192,192,192,1) 94%));
+  background-color: rgb(192,192,192);
+  @include background-image(linear-gradient(rgba(72,72,72,1) 0px, rgba(3,3,3,1) 20px, rgba(255,255,255,1) 21px, rgba(192,192,192,1) 100%));
+  @include box-shadow($vfnShadowLite 0 5px 10px);
+  color:#666;
+  padding:30px 10px 10px 10px;
+  position: absolute;
+  left:10%;
+  right:10%;
+  top:40%;
+  z-index: 20;
+  div.logo {
+    background:url(/app.zone.static/images/vfnzone-community-sprites.png) no-repeat 0px -50px;
+    position: absolute;
+    height: 21px;
+    left:0;
+    top:0;
+    width:100px;
+    z-index: 2;
+  }
+}
+
+/* from http://css-tricks.com/examples/ShapesOfCSS/
+  Not working yet
+*/
+/*
+.bubble:after {
+   content:"";
+   position: absolute;
+   right: 100%;
+   top: 26px;
+   width: 0;
+   height: 0;
+   border-top: 13px solid transparent;
+   border-right: 26px solid red;
+   border-bottom: 13px solid transparent;
+}
+*/
+
+/********************************* TABLES */
+
+table.grid {
+	td {
+		border-bottom:1px solid #ddd;
+		padding: 2px;
+		font-size: $fontSizeSm;
+	}
+	thead td {
+		background-color:#eee;
+		color: #666;
+	}
+	p {
+		color: #333;
+		display: inline-block;
+		margin:0 !important;
+		padding: 5px 0;
+	}
+}
+
+#profiles.grid {
+	margin-top: 10px;
+	width: 100%;
+}
+.grid p.desc {
+	color: inherit;
+	width:150px;
+}
+
+
+
+
+
+
+/********************************* FORM OVERRIDES */
+
+
+
+.deform {
+	button {
+		font-size: 1em !important;
+	}
+	li {
+		@include clearfix();
+		clear:both;
+		display:block;
+		height:100%;
+		margin:2px 0 !important;
+		padding:5px 0 !important;
+		position:relative;
+		.checkboxes li {
+			padding:0 !important;
+		}
+		.header {
+			border-bottom:1px solid #aaa !important;
+			margin-top:2em !important;
+			&:first-child {
+				margin-top:0 !important;
+			}
+		}
+	}
+
+}
+
+
+
+
+.review .deform li {
+  border-bottom: 1px solid #eee;
+}
+
+
+
+.req, .deform .req {
+	color:#cc0000 !important;
+	font-size:1.7em;
+//	line-height:0.5em !important;
+	vertical-align: middle;
+}
+
+.deform {
+  label,
+  div.control,
+  .form-item-description,
+  div.error {
+  	//height:30px;
+  	display:block;
+  	float:left;
+  	line-height: $formItemLineHeight;
+  	margin-top: 0;
+  	margin-right:10px;
+  	padding: 0;
+  }
+
+  div.control {
+    //background: $bgDebug;
+    //padding:2px;
+    min-width:500px;
+    @media only screen and ( max-width: 900px ) {
+      min-width:250px;
+    }
+    //width:300px;
+    //white-space: nowrap	;
+  }
+
+  select,
+  input {
+  	//background:rgba(0,0,0,0.1);
+  	border:1px solid #ccc !important;
+  	float:left;
+  	font-size: $fontSizeNormal !important;
+  	height:30px !important;
+  	line-height: $formItemLineHeight;
+  	margin-right: 10px !important;
+  	width: $inputW;
+	}
+
+  input {
+  	@include border-radius($crSm);
+  	@include box-shadow($vfnShadowLite 0 1px 3px inset);
+  	padding:0 5px;
+	}
+	label {
+  	font-weight: normal !important;
+  	width: 130px;
+	}
+
+	li.controls.checkbox div.control,
+	li.controls .checkboxes div.control {
+  	min-width:25px;
+  	width: 25px;
+  }
+}
+
+
+.login .deform label,
+.agreement .deform label, {
+	width: 170px;
+}
+
+.deform li .checkboxes label,
+.review .deform label {
+	width:250px;
+	@media only screen and ( max-width: 500px ) {
+  	//background: $bgDebug;
+		float:none !important;
+		margin-bottom:5px;
+		width:100%;
+  }
+}
+
+.deform p,
+div.control {
+  display: inline-block;
+  margin-top:0;
+}
+
+.review {
+  label,
+  .deform div.control,
+  .deform .form-item-description,
+  .deform div.error {
+    line-height: $defaultLineHeight;
+	}
+  .deform p,
+  div.control,
+  li.control span,
+  li.control em {
+    //@include border-radius($crSm);
+    //background: #eee;
+    color:#333;
+    font-weight: 600;
+  }
+}
+
+.deform li.controls.checkbox label,
+.deform li .checkboxes label {
+	float:none;
+	line-height: $formItemLineHeight;
+	width:auto;
+}
+
+.deform div.form-item-description {
+//	background: $bgDebug;
+	color: lighten($fgContent,20);
+	font-size: $fontSizeSm;
+	font-style: italic;
+	line-height: $formItemLineHeight;
+	white-space: normal;
+	//width: 200px;
+}
+
+.deform li.controls.error {
+	@include border-radius($crMd);
+	background:rgba(#c00,0.1);
+	padding-left:5px !important;
+	.control {
+    //background: $bgDebug;
+    min-width: $inputW;
+	}
+}
+
+.deform li.controls.error div.form-item-description {
+	display: none;
+}
+
+.deform li.errorLi {
+	@include border-radius($crMd);
+	background-color: $alertBg;
+	border:2px solid ($alertFg, 0.5);
+  color: $alertFg;
+	padding: 10px !important;
+	h3 {
+  	font-size:1.5em;
+  	margin:5px;
+	}
+}
+
+.deform input[type="checkbox"] {
+	line-height: $formItemLineHeight;
+	margin-bottom: 0;
+	margin-top:0;
+	width:auto !important;
+}
+
+.deform div.error {
+	//@include border-radius(5px);
+	//background-color: $alertBg;;
+	color: $alertFg;
+	font-size: 0.8em;
+	font-weight: bold !important;
+}
+
+#agreement-controls input {
+	width: 50px;
+}
+
+/************************************ STATIC CONTENT */
+
+.content.static {
+  h1 {
+    color: #666;
+    font-style:normal;
+    text-shadow:none;
+  }
+  h2 {
+    color: #333 !important;
+    margin-top: 20px;
+    text-transform:uppercase;
+  }
+	ol {
+		list-style-type: lower-alpha;
+		margin-left: 30px;
+	}
+	ol ol {
+		list-style-type: decimal;
+	}
+  li {
+    margin-bottom: 10px;
+  }
+  div#logos {
+    div {
+      display:inline-block;
+      height: 65px;
+      margin-right:20px;
+      width:190px;
+    }
+    #logo-amplifysocial {
+      background: url('../images/Amplify-Social-190x65.png') no-repeat;
+    }
+    #logo-vfn {
+      background: url('../images/VFN-logo-horz-on-white-190x65.png') no-repeat;
+    }
+    #logo-vfnzone {
+      background: url('../images/VFNZone-logo-horz-on-white-204x65.png') no-repeat;
+      width:204px;
+    }
+  }
+  p.doc-version {
+    color:#999;
+    font-size:.7em;
+    text-align: right;
+  }
+}

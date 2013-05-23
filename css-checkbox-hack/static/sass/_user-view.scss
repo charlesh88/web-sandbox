@@ -1,0 +1,9 @@
+body.user-ugc {
+  .app-widget-photo,
+  .app-widget-video {
+    .title {
+      // Design calls for title to be hidden when the logged in user has edit permissions on widget content. Why? Who knows.
+      display: none;
+    }
+  }
+}

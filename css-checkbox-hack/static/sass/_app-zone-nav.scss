@@ -1,0 +1,270 @@
+// New nav styles
+
+$navHideOffsetMobile: 200%;
+$navHideOffsetDesktop: -99999px;
+$navExpandPercent: 90%;
+$navElemH: $headerH * 1.2;
+$breadcrumbH: $headerH - ($headerH * 0.3);
+$navMenuW: 150px;
+$navDropdownElemHOffset: $navElemH * .25;
+$navDropdownElemH: $navElemH - $navDropdownElemHOffset;
+$navMobileElemH: $navDropdownElemH;
+$navArrowSize: 4px;
+$navArrowColor: #666;
+$navAColor: #666;
+$fontSizeMobileBase: 1em;
+$fontSizeDesktopBase: 0.75em;
+
+#page-wrapper {
+  &.collapse,
+  &.collapse header {
+    left: $navExpandPercent;
+    overflow: hidden;
+  }
+}
+
+#nav-wrapper,
+#show-last-menu {
+  display: none; // mobile-first, so this is hidden bro
+  line-height: $navElemH;
+  position:absolute;
+  top: 0px; right: 0px; bottom: 0px; left: 0px;
+  width: auto;
+  height: auto;
+  text-transform: uppercase;
+}
+
+header {
+    //background-color: red;
+  @include background-image(linear-gradient(
+  rgba(lighten($headerBaseColor, 50%), 1.0) 0%, 
+  rgba($headerBaseColor, 0.8) 70%, 
+  rgba($headerBaseColor, 0.8) 80%, 
+  rgba($headerBaseColor, 0.7) 100%)
+  );
+  // @include box-shadow($vfnShadowLite 0 2px 10px);
+  color: #ccc;
+  //font-size: 0.8em;
+  height: $headerH;
+  line-height: $headerH;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+  a {
+    color: #ccc;
+  }
+  #show-last-menu {
+    background: url("/static/images/core-sqor-sprites.png") no-repeat 0px -351px;
+    height: $headerH;
+    line-height: $headerH;
+    padding-left: 30px;
+    width: auto;
+    left: 10px;
+  }
+  #header-elems-container {
+    position: absolute;
+    top: 0px; right: 0px; bottom: 0px; left: 10px; width: auto; height: auto;
+  }
+  &.expand {
+    #logo {
+      display: block;
+      margin-left: -105px;
+      right: auto;
+    }
+    #show-last-menu {
+      display: none;
+      &.show {
+        display: block;
+      }
+    }
+    #header-elems-container {
+      left: $navExpandPercent + 2;
+      right: auto;
+      width: 100%;
+    }
+  }
+  #logo {
+    background:transparent url("/static/images/core-sqor-sprites.png") no-repeat -5px -205px;
+    display: none;
+    position: absolute;
+    height: 50px;
+    width: 100px;
+    top: 0; right: 0px; bottom: auto; left: auto;
+  }
+  
+  #user {
+  	position: absolute;
+  	right: $headerH / 4;
+  	top: 0px;
+  	text-align: right;
+  }
+  
+  #header-shadow {
+    @include background-image(linear-gradient(rgba(black,0.8) 0%, rgba(black,0.0) 100%));
+    pointer-events: none;
+    position: absolute;
+    top: $headerH; right: 0; bottom: auto; left: 0; 
+    width: auto; height: 10px;
+  }
+}
+
+#show-last-menu {
+}
+
+#nav-wrapper {
+  background-color: #eee; 
+  font-size: $fontSizeMobileBase;
+  z-index: 0; // YES, this needs to be under the header in mobile mode
+  a {
+    color: $navAColor;
+  }
+  &.expand {
+    display: block;
+    width: $navExpandPercent;
+  }
+  text-transform: uppercase;
+  
+  #main-nav,
+  #main-menu-container {
+    background: #eee;
+    position: absolute;
+    overflow-x: hidden;
+    overflow-y: auto;
+    top: $navElemH; right: 0px; bottom: 0px; left: 0px;
+    z-index: 10;
+    width: 100%;
+    height: auto;    
+    ul {
+      display: block;
+      position: absolute;
+      min-width: 150px;
+      width: 100%;
+      top: 0px;
+      z-index: 1;
+      &.show {
+        left: 0px;
+        //width: 100% !important;
+      }
+      &.hide {
+        left: $navHideOffsetMobile;
+      }
+      ul {
+        &.show { left: $navHideOffsetMobile * -1; }
+        ul {
+          &.show { left: $navHideOffsetMobile * -2; }
+          ul {
+            &.show { left: $navHideOffsetMobile * -3; }
+          }
+        }
+      }
+      li {
+        border-top: 1px solid #ccc;
+        &:first-child {
+          border-top: none !important;
+        }
+        &.active > a {
+          color: $activeAColor;
+        }
+        a {
+          display: block;
+          min-height: $navMobileElemH;
+          line-height: $navMobileElemH;
+          overflow: hidden;
+          padding: 0 10px;
+          position: relative;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+    }
+      
+    &.horz ul {
+      background: none;
+      white-space: nowrap;
+      li {
+        display: inline-block;
+        margin-right: 10px;
+      }
+    }
+  } // close #main-menu-container
+  
+}
+
+#breadcrumbs-container {
+  //background: rgba(yellow, 0.2);
+  color: #666;
+  font-size: $fontSizeMobileBase * 0.8;
+  top: 0px; right: 5px; bottom: auto; left: 30px;
+  height: $headerH; width: auto;
+  line-height: $headerH;
+  position: absolute;
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  z-index: 20;
+  ul {
+    li {
+      display: inline-block;
+      a {
+        color: #ccc;
+        display: block;
+        padding: 0px 15px 0px 0px;
+        pointer-events: none;
+        position: relative;
+        .submenu-arrow {
+          right: 0px;
+        }
+      }
+    }
+    li:last-child span.submenu-arrow {
+      display: none;
+    }
+  }
+}
+
+.btn {
+  &#btn-mobile {
+    background: url("/static/images/core-sqor-sprites.png") no-repeat 0 -303px;
+    display: inline-block;
+    height: $headerH;
+    width: 20px;
+  }
+}
+
+//@media screen and (min-width: $mobileBreakPoint) {
+//  @include responsive-nav-desktop();  // MOVED TO _RESPONSIVE
+//}
+
+html.lt-ie9 {
+  // Handle IE8, and maybe 7
+  @include responsive-nav-desktop();
+}
+
+
+span.submenu-arrow {
+  position: absolute;
+  top: 50%;
+  margin-left: $navArrowSize * -1;
+  margin-top: $navArrowSize  * -1;
+  right: 15px;
+  display: block;
+  width: 0; 
+  height: 0;
+  border-width: $navArrowSize;
+  border-color: transparent;
+  border-style: solid;
+  border-left-color: $navArrowColor;
+  &.left {
+    border-color: transparent; 
+    border-right-color: navArrowColor;
+  }
+  &.down {
+    border-color: transparent; 
+    border-top-color: $navArrowColor;
+  }
+}
+
+.hide { display: none; }
+.show { display: block; }

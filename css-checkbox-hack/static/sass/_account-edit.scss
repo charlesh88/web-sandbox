@@ -1,0 +1,14 @@
+.account-edit-container {
+  //position: absolute;
+  //top: $headerH; right: 0; bottom: 0; left: 0;
+  height: auto;
+  margin: 0;
+  width: 100%;
+
+  iframe {
+    display: block;
+    width: 100%;
+    //height: 100%;
+    height: 800px;
+  }
+}

@@ -1,0 +1,23 @@
+// Styles for IE8 and lower
+
+
+
+body {
+  font-family: Helvetica, sans-serif;
+}
+
+#header {
+  //background: lighten($headerBaseColor, 20%);
+  background:#000 url("/app.zone.static/images/app-zone-bg-header.png") repeat-x;
+}
+
+#breadcrumbs-container {
+  background: lighten($headerBaseColor, 10%); // IE 8 and lower
+}
+
+#nav-wrapper #main-menu-container > ul > li > a:hover {
+  // A tags in the main menu
+  background: none;
+}
+
+

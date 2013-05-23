@@ -1,0 +1,154 @@
+.app-zone-grid {
+  // Was just .grid
+  @include clearfix;
+  //background: #333;
+  min-width: 320px;
+  padding-bottom: $gridElemMargin;
+  padding-right: $gridElemMargin;
+
+  .item {
+    // Was .elem
+    // background: red;
+    display:block;
+    float: left;
+    position: relative;
+    height: 0;
+    // By default, items are 2 across within a gridbox
+    width:50%;
+    padding-bottom: 50%;
+
+    &.grid-item-1x2 {
+      padding-bottom: 100%;
+    }
+
+    &.grid-item-2x1 {
+      width: 100%;
+    }
+
+    &.grid-item-2x2 {
+      width: 100%;
+      padding-bottom: 100%;
+    }
+
+    &.north-east {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &.north-west {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    &.south-east {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    &.south-west {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+
+    .inner {
+      // Was .box
+      background-size: cover;
+      font-size: .8em;
+      position: absolute;
+      top: $gridElemMargin;
+      right: 0px;
+      bottom: 0px;
+      left: $gridElemMargin;
+      //padding: 10px;
+      height: auto;
+      width: auto;
+      h2 {
+        @include background-image(linear-gradient(rgba(black,0), rgba(black,0.7) 60%));
+        @include text-shadow(rgba(black, 0.3) 0px 1px 3px);
+        color: rgba(white, 0.8);
+        display: block;
+        padding: $gridElemMargin;
+        //padding-right: $gridElemMargin;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: auto;
+        text-transform: uppercase;
+        z-index: 5;
+      }
+    }
+  }
+  .image {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    display: block;
+    height: auto;
+    overflow: hidden; // Needed to clip text when enclosed .title element exceeds its purview
+    position: absolute;
+    width: auto;
+    top: $imageMargin;
+    right: $imageMargin;
+    left: $imageMargin;
+  }
+  
+  .gridbox {
+    // Was .col
+    float: none;
+    height: 0; 
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    &.square {
+      .item
+      {
+        // Was .elem
+        width: 50%;
+        padding-bottom: 50%;
+      }
+    }
+    &.grid-2x1 {
+      // Was .x2
+      //background: green;
+      padding-bottom: 50%;
+      height: auto;  
+      .item {
+        width: 50%;
+        padding-bottom: 50%;
+      }
+    }
+    &.tallbox {
+      .item
+      {
+        // Was .elem
+        width: 50%;
+        padding-bottom: 100%;
+      }
+    }
+  }
+}
+
+/*
+
+.grid.home,
+.home .grid {
+  background: #000;
+  color: #666;
+}
+
+.grid.news,
+.news .grid
+{
+  background: #666;
+  color: #666;
+  .box {
+    background: white;
+  }
+}
+
+*/

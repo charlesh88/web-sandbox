@@ -1,0 +1,66 @@
+// classes for widgets
+
+.app-zone-grid .square,
+.app-zone-grid .grid2x1
+{
+  .inner {
+    // Was .box
+    //background: url(http://vfnzone.com/images/amplify-social/ad-unit-assets/persons/hunter-pence/home-hero.jpg) no-repeat center 20%;
+    background-size: cover;
+    /*
+    &.b2 
+    {
+      background-image: url(http://vfnzone.com/images/amplify-social/ad-unit-assets/persons/hunter-pence/game-changer.jpg);
+    }
+    &.b3 
+    {
+      background-image: url(http://vfnzone.com/images/amplify-social/ad-unit-assets/persons/kate-upton/home-hero-2.jpg);
+    }
+    &.iconwidget 
+    {
+      background-image: none;
+      background-color: red;
+      h2 {
+        background: none;
+        bottom: auto;
+        top: 50%;
+        padding-top:0;
+        margin-top: -10px;
+      }        
+    }
+    */
+  }
+}
+
+.grid .tallbox
+{
+  $tallBoxImgH: 110px;
+  .box 
+  {
+    background: white;
+    h2
+    {
+      color: white;
+      //top: 85px;
+    }
+    .image
+    {
+      height: $tallBoxImgH;
+    }
+    .content
+    {
+      //background: rgba(red, 0.2);
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 0.9em;
+      overflow: hidden;
+      position:absolute;
+      top: $tallBoxImgH + 20;
+      bottom: $imageMargin;
+      right: $imageMargin;
+      left: $imageMargin;
+      p {
+        margin-bottom: 5px;
+      }
+    }
+  }
+}

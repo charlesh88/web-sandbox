@@ -1,0 +1,98 @@
+@media
+//screen and (min-device-width: $mobileBreakPoint), 
+screen and (min-width: $mobileBreakPoint) {
+  // The first rule prevents a device capable of higher resolution from going into 'mobile' mode. Comment this out for browser-based development. DO NOT CHECK in with first rule commented out!!!
+  @include responsive-nav-desktop();
+  #container {
+    margin-top: $headerHDesktop + $gridElemMargin !important;
+    .account-edit-container {
+      width: 80% !important;
+      margin: 0 auto !important;
+    }
+  } 
+  .app-zone-grid {
+    .gridbox {
+      float: left;
+      width: 50%;
+      padding-bottom: 50%;
+
+      &.grid-2x2 { 
+        .item.grid-item2x2 {
+          // Handles large grid-item2x2's
+          width: 100%;
+          padding-bottom: 100%;
+        }
+      }
+
+      &.grid-2x1 {
+        padding-bottom: 25%;
+      }
+    }
+    #main-menu, #main-menu > ul {
+      display: block;
+    }
+    
+    #btn-mobile-menu {
+      display: none;
+    }
+  }
+  .account-edit-container {
+    bottom: 50px !important;
+    left: 10% !important;
+    right: 10% !important;
+  }
+  #page-wrapper {
+    min-width: $mobileBreakPoint;
+  }
+  
+  .app-common {
+    top: 30px !important;
+    .header {
+      display: block !important;
+      position: absolute;
+      margin-top: -50px;
+      color: #fff;
+      left: 50%;
+      margin-left: -150px;
+      width: 300px;
+      text-align: center;
+    }
+    .image-caption-wrapper {
+      $myMaxW: 200px;
+      .image {
+        max-width: $myMaxW !important;
+      }
+      .caption-wrapper {
+        left: $myMaxW + 20 !important;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 920px) {
+  .app-zone-grid
+  {
+    .gridbox {
+      width: 33.333%;
+      padding-bottom: 33.333%;
+
+      &.grid-2x1 {
+        padding-bottom: 16.6667%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1220px) {
+  .app-zone-grid
+  {
+    .gridbox {
+      width: 25%;
+      padding-bottom: 25%;
+
+      &.grid-2x1 {
+        padding-bottom: 12.5%;
+      }
+    }
+  }
+}

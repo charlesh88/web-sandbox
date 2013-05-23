@@ -1,0 +1,181 @@
+@mixin responsive-nav-desktop() {
+  $navElemH: $headerHDesktop;
+  html,
+  body {
+    //background: #006 !important; // TEMP
+    //overflow: auto !important;
+  }
+  #btn-mobile {
+    display: none !important;
+  }
+  
+  #show-last-menu {
+    display: none;
+  }
+  
+  header {
+    height: $navElemH;
+    line-height: $navElemH;
+    #header-elems-container {
+      left: 0px;
+    }
+    #logo {
+      background-position: -5px -203px;
+      display: block;
+      left: 10px;
+      right: auto;
+    }
+    #header-shadow {
+      top: $navElemH;
+    }
+  }
+  
+  #nav-wrapper {
+    $myLeft: 120px;
+    background: none;
+    display: block;
+    font-size: $fontSizeDesktopBase !important;
+    bottom: auto; left: $myLeft !important;
+    height: $navElemH;
+    line-height: inherit;
+    min-width: $mobileBreakPoint - $myLeft;
+    position: fixed;
+    z-index: 20;
+    white-space: nowrap;
+    
+    #main-nav,
+    #main-menu-container {
+      background: none;
+      overflow: visible;
+      top: 0; right: auto;
+      ul {
+        // All ul's
+        background: #eee;
+        //background: rgba(#eee, 0.9);
+        top: $navElemH;
+        width: $navMenuW;
+        &.hide {
+          left: $navHideOffsetDesktop;
+        }
+        &.show {
+          left: auto !important;
+        }
+        &.showingChildren {
+          left: auto !important;
+        }
+        li {
+          // All li's
+          a {
+            // All a's
+            &:hover {
+              background: #fff;
+              color: #e00;
+              .submenu-arrow {
+                border-left-color: #e00;
+              }
+            }
+          }
+        }
+      }
+      > ul {
+        // This is the main nav
+        $myArrowPadding: 20px;
+        background: none; //rgba(red, 0.1);
+        top: 0px; right: 10px; left: auto;
+        width: auto;
+        > li {
+          // li's in main nav only
+          border-top: none;
+          display: inline-block;
+          height: $navElemH;
+          > a {
+            // a tags in main nav only
+            $myLineH: ($navElemH * .75);
+            color: #ccc;
+            height: 100%;
+            line-height: $myLineH;
+            span.submenu-arrow {
+              top: ($myLineH / 2) + ($navArrowSize / 2);
+              right: ($myArrowPadding / 2) - ($navArrowSize / 2) - 1;
+              border-color: transparent;
+              border-top-color: $navArrowColor;
+            }
+            &:hover {
+              background: rgba(#fff, 0.1);
+              span.submenu-arrow {
+                border-color: transparent;
+                border-top-color: #e00;
+                
+              }
+            }
+          }
+          ul {
+            // 2nd and 3rd level nav ul's only
+          }
+        }
+        > li.has-children a {
+          padding-right: $myArrowPadding;
+        }
+        a {
+          &:hover {
+            color: $activeAColor;
+          }
+        }
+        a.has-subnav {
+          padding-right: 20px !important;
+          span.submenu-arrow {
+            right: .5em;
+          }
+        }
+        &.hide {
+          //left: 0px !important;
+          left: auto;
+        }
+        ul {
+          // All drop down navs
+          @include box-shadow(rgba(black,0.5) 0px 1px 7px);
+          a {
+            min-height: $navDropdownElemH;
+            line-height: $navDropdownElemH;
+          }
+          ul {
+            &.show {
+              left: $navMenuW !important;
+              top: auto; //0px !important;
+              margin-top: ($navElemH * -1) + $navDropdownElemHOffset;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  #breadcrumbs-container {
+    $myH: 15px;
+    $myTop: $navElemH - $myH - ($navElemH - $myH) * .15;
+    //background: rgba(#666, 0.2);
+    font-size: $fontSizeDesktopBase * 0.9 !important;
+    top: $myTop; right: 0px; bottom: auto; left: 0; width: 100%; height: $myH;    
+    line-height: $myH;
+    text-align: left;
+    ul {
+      position: absolute;
+      right: 20%; left: 20%; top: 0px; bottom: 0px; height: auto; width: auto;
+      text-align: center;
+      li:first-child {
+        // This is the breadcrumb for a top level menu item - hide it in desktop mode
+        display: none;
+      }
+      li {
+        display: inline-block;
+        a {
+          $myColor: darken($navAColor, 3%);
+          color: $myColor;
+          .submenu-arrow {
+            border-left-color: darken($myColor, 10%);
+          }
+        }
+      }
+    }
+  }  
+} // </ mixin

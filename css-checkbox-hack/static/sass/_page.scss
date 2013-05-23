@@ -1,0 +1,158 @@
+/*
+Site: VFN Platform
+Type: Page Structure
+Author: Fernando Medina
+URL: 
+
+### TABLE OF CONTENTS ############################
+
+	body
+	Header
+	Container
+		NAV Main
+		Content
+	Footer
+
+################################################*/
+
+
+
+body {
+	background:#49678a url('../images/bg-tim-blue-3.jpg') no-repeat center top;
+	background-attachment: fixed;
+	background-size: 100%;
+	color:$fgBody;
+	font-family:$fontBody;
+	font-size:$fontSizeNormal;
+	line-height: $defaultLineHeight;
+}
+
+#page-wrapper {
+	position: absolute;
+	top:75px;
+	bottom:0px;
+
+
+}
+
+
+#container {
+
+	@include border-radius($crLg);
+	background:#000; /* IE 6-9 */
+	background: rgba(0,0,0,0.6)!important;
+	border-top:1px solid rgba(255,255,255,0.4);
+	color:$vfnLite;border: 1px solid red;
+	position: absolute;
+	bottom: 20px;
+	top:	5px;
+	left: 5px;
+	right: 5px;
+	border: 1px solid #333;
+	padding: 2%;
+	
+
+
+
+	
+}
+#title {
+	clear: right;
+	padding: 3% 0;
+
+	
+}
+footer {
+	clear: both;
+	bottom:0;
+	height: 15px;
+	position: absolute;
+}
+
+
+/* dummy content */
+#content, #nav-site, #page-wrapper, header {
+    -webkit-transition: .2s all ease;
+	-moz-transition: .2s all ease;
+	transition: .2s all ease; 
+	position: absolute;
+	bottom: 0px;
+	top: 45px;
+	
+   }
+#content, #page-wrapper  {
+	width: 100%;
+	
+	/* @include border-radius($crLg);
+	border: 1px solid #333;
+
+	@include box-shadow($vfnShadow 0 0 10px); */
+
+	background: transparent!important;
+}
+#content {
+	right: 2%;
+	left: 2%;
+	width: auto;
+}
+/********************************* Header */
+header {
+  $experimental-support-for-svg: true;
+	@include background-image(linear-gradient(#4d4d4d 30%, #000));
+	@include box-shadow($vfnShadowLite 0 5px 10px);
+	color: $vfnLite;
+	font-size: $fontSizeSm;
+	height: 45px;
+	position:fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	width:100%;
+	z-index:100;
+		#logo-vfn {
+			background: transparent url('../images/vfn-main-logo.png') no-repeat center top ;
+			height: 44px;		
+			width:175px;
+			position: inherit;
+			width: 100%;	
+		}
+		#user {
+			display: none;
+			margin: 0 3%;
+			
+		}		
+}
+
+
+/********************************* Header */
+
+
+
+/********************************* Footer */
+footer {
+	//background: $bgDebug;
+	clear: both;
+	color:rgba(255,255,255,0.3);
+	font-size: $fontSizeVsm;
+	right: 5px;
+	bottom: 5px;
+	font-weight: 400;
+	.col {
+
+	}
+	#copyright {
+		
+		text-align: right;
+	}
+	#social {
+		@include border-radius($crMd);
+		background: rgba(0,0,0,0.5);
+		display:none;
+
+		width: 75%;
+	}
+	.elem {
+		background: $bgDebug !important;
+		padding: 2px;
+	}
+}
