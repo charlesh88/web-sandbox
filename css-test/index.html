@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>CSS Test</title>
+<link href="css/collection.css" rel="stylesheet" type="text/css" />
+<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Syncopate:700' rel='stylesheet' type='text/css'>
+<!--[if IE]>
+
+<![endif]-->
+</head>
+<body>
+<header id="header-content">
+	<a id="logo-vfn" href="{{ request.route_url('/') }}"></a>
+	<div id="user">
+		<span id="msg">Welcome</span>
+		<a class="btn" href="{{ request.route_url('user_account_info_view', user_id=request.user.id) }}">My Account</a>
+		<a class="btn" href="{{ request.route_url('logout') }}">Logout</a>
+		<a class="btn" href="{{ request.route_url('login', _query=[('destination', request.path)]) }}">Login</a>
+	</div>
+</header>
+<div id="container">
+<h1>CSS Test</h1>
+<p>v1.1</p>
+<a href="" class="btn">This is a button</a> 
+<a href="" class="btn-lo-em">This is a low emphasis button</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+.split-pane {overflow: auto; position: absolute; top: 0; bottom: 0; width: 50%}
+.splitter {
+	width: 5px; position: absolute; top: 0; bottom: 0; z-index: 10;
+	background-color: #eee; border: 1px solid #bbb; border-width: 0 1px;
+}
+.splitter:hover {cursor: col-resize;}
+
+.horizontal .split-pane {width: auto; height: 50%}
+.horizontal .splitter {
+	bottom: auto; width: auto; left: 0; right: 0;
+	height: 5px; border-width: 1px 0;
+}
+.horizontal .splitter:hover {cursor: row-resize;}
+
+/* force scrollbars to be visible on OS X */
+.split-pane::-webkit-scrollbar {
+    -webkit-appearance: none; width: 11px; height: 11px; background-color: #F0F0F0;
+}
+.split-pane::-webkit-scrollbar-thumb {
+    border-radius: 8px; border: 2px solid #F0F0F0; background-color: rgba(0, 0, 0, .5);
+}

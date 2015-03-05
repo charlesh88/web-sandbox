@@ -1,0 +1,21 @@
+Simple resizable split panes with jQuery
+
+Copyright (c) 2012 James Garlick
+
+MIT License (see LICENSE file)
+
+Supports horizontal and vertical split panes which can be nested.
+
+Basic usage:
+<div class="split-layout">
+	<div class="split-pane"></div>
+	<div class="split-pane"></div>
+</div>
+
+See example HTML files for more.
+
+Tested in:
+Chrome 23
+Firefox 16
+IE 8, IE 9
+Safari 6

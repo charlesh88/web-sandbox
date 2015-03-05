@@ -1,0 +1,60 @@
+.legend.table-approach {
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+	.legend-item {
+		@include test(red);
+		display: table-row;
+		.elem {
+			display: table-cell;
+		}
+		.legend-path {
+			@include test(green);
+//			position: relative;
+			width: auto;
+			div {
+//				@include absPosDefault();
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+
+		}
+		.legend-leaf {
+			@include test(yellow);
+			overflow: visible;
+			text-align: right;
+			white-space: nowrap;
+			width: auto;
+//			width: 99%;
+
+		}
+	}
+}
+
+.legend.float-approach {
+	@include test(green);
+	display: block;
+	.legend-item {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		.legend-path {
+			display: inline;
+			.w {
+				@include test(blue);
+				display: inline-block;
+			}
+		}
+		.legend-leaf {
+			@include test(red);
+			white-space: nowrap;
+			float: left;
+//			position: absolute;
+		}
+	}
+
+
+
+
+}

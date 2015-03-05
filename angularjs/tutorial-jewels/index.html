@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="gemStore">
+<head>
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap-3.2.0-dist/css/bootstrap.min.css"/>
+</head>
+<body class="container" ng-controller="StoreController as store">
+<script type="text/javascript" src="lib/js/angular.min.js"></script>
+<script type="text/javascript" src="static/js/app.js"></script>
+<h1>Angular JS Gem Store Tutorial</h1>
+<div class="product row" ng-repeat="product in store.products">
+	<h3>
+		{{product.name}}
+		<em class="pull-right">${{product.price}}</em>
+	</h3>
+</div>
+</body>
+</html>

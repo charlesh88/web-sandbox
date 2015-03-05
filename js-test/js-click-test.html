@@ -1,0 +1,22 @@
+<html>
+<head>
+	<script>
+		function hc(l, e) {
+			alert(e + " " + l);
+			e.stopImmediatePropagation();
+		}
+	</script>
+</head>
+<body>
+<h1>Click test 5</h1>
+<p>Not currently working as desired</p>
+<div style="background: green; width: 300px; height: 300px; position:relative;" onclick="hc('A', this);">
+	<span style="font-size: 10em;">A</span>
+	<div style="position: absolute; width: 45%; height: 20px; top: 0; background: #003300; z-index: 1;">
+		<div style="background: orange; width: 50px; height: 20px; position:absolute; top: 0; z-index: 1;" onclick="hc('B', this);">B</div>
+		<div style="background: orange; width: 50px; height: 20px; position:absolute; top: 0; right: 0; z-index: 1;" onclick="alert('C');">C</div>
+	</div>
+	<div style="background: orange; width: 50px; height: 20px; position:absolute; top: 50px; right: 0; z-index: 1;" onclick="alert('D');">D</div>
+</div>
+</body>
+</html>
