@@ -231,12 +231,8 @@ span {
     /* line 42, ../sass/_ellipsis.scss */
     .legend.float-approach .legend-item .legend-path {
       display: inline; }
-      /* line 44, ../sass/_ellipsis.scss */
-      .legend.float-approach .legend-item .legend-path .w {
-        background-color: rgba(0, 0, 255, 0.2);
-        display: inline-block; }
-    /* line 49, ../sass/_ellipsis.scss */
+    /* line 45, ../sass/_ellipsis.scss */
     .legend.float-approach .legend-item .legend-leaf {
       background-color: rgba(255, 0, 0, 0.2);
       white-space: nowrap;
-      float: left; }
+      float: right; }

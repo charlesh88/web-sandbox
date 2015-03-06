@@ -41,16 +41,11 @@
 		white-space: nowrap;
 		.legend-path {
 			display: inline;
-			.w {
-				@include test(blue);
-				display: inline-block;
-			}
 		}
 		.legend-leaf {
 			@include test(red);
 			white-space: nowrap;
-			float: left;
-//			position: absolute;
+			float: right;
 		}
 	}
 
