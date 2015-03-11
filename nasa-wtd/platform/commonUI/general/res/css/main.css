@@ -54,6 +54,7 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block; }
 
+/********************************************************************* FORM MIXINS */
 /* line 2, ../sass/_effects.scss */
 .disabled,
 a.disabled {
@@ -236,3 +237,52 @@ span {
       background-color: rgba(255, 0, 0, 0.2);
       white-space: nowrap;
       float: right; }
+
+/* line 3, ../sass/_alignment.scss */
+.row {
+  overflow: hidden;
+  *zoom: 1;
+  font-size: 0.8em;
+  height: 22px;
+  line-height: 22px;
+  position: relative; }
+  /* line 10, ../sass/_alignment.scss */
+  .row .col {
+    float: left; }
+    /* line 13, ../sass/_alignment.scss */
+    .row .col.label {
+      width: 20%; }
+    /* line 16, ../sass/_alignment.scss */
+    .row .col.controls {
+      width: 80%; }
+
+/* line 23, ../sass/_alignment.scss */
+.elem {
+  display: inline-block;
+  position: relative; }
+  /* line 27, ../sass/_alignment.scss */
+  .elem input[type="text"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-shadow: inset rgba(0, 0, 0, 0.5) 0 1px 5px;
+    -moz-box-shadow: inset rgba(0, 0, 0, 0.5) 0 1px 5px;
+    box-shadow: inset rgba(0, 0, 0, 0.5) 0 1px 5px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-bottom: 1px solid #999999;
+    color: #cccccc;
+    outline: none;
+    padding: 0 3px;
+    height: 22px; }
+    /* line 248, ../sass/_mixins.scss */
+    .elem input[type="text"].error {
+      background: rgba(255, 0, 0, 0.5); }

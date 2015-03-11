@@ -1,0 +1,31 @@
+$h: 22px;
+
+.row {
+//	@include test(red);
+	@include clearfix;
+	font-size: 0.8em;
+	height: $h;
+	line-height: $h;
+	position: relative;
+	.col {
+//		@include test(red, 0.1);
+		float: left;
+		&.label {
+			width: 20%;
+		}
+		&.controls {
+			width: 80%;
+
+		}
+	}
+}
+
+.elem {
+//	@include test(yellow, 0.1);
+	display: inline-block;
+	position: relative;
+	input[type="text"] {
+		@include nice-input();
+		height: $h;
+	}
+}
